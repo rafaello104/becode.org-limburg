@@ -1,0 +1,73 @@
+// === Responsive Grid Variables ===
+$standard-unit: 5px;
+
+$columns: 12;
+$row-margin: $standard-unit * 3;
+
+$default-map: (  
+    affix:              "",    
+    breakpoint:         0px,
+    container-w:        auto,
+    col-padding:        $standard-unit * 3,
+    col-margin:         $standard-unit
+);
+
+$sm-map: (
+    generate:           true,  
+    affix:              "-sm",    
+    breakpoint:         576px,
+    container-w:        546px,
+    col-padding:        $standard-unit * 3,
+    col-margin:         $standard-unit
+);
+
+$md-map: (
+    generate:           true,  
+    affix:              "-md",    
+    breakpoint:         768px,
+    container-w:        728px,
+    col-padding:        $standard-unit * 3,
+    col-margin:         $standard-unit
+);
+
+$lg-map: (
+    generate:           true,  
+    affix:              "-lg",    
+    breakpoint:         992px,
+    container-w:        942px,
+    col-padding:        $standard-unit * 3,
+    col-margin:         $standard-unit
+);
+
+$xl-map: (
+    generate:           true,  
+    affix:              "-xl",    
+    breakpoint:         1200px,
+    container-w:        1140px,
+    col-padding:        $standard-unit * 3,
+    col-margin:         $standard-unit
+);
+
+$breakpoint-map: (
+    $sm-map,
+    $md-map,
+    $lg-map,
+    $xl-map
+);
+
+// === Used Font Families ===
+@font-face {
+    font-family: BeCode;
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: TitleLight;
+    src: url('../fonts/Lato/Lato-Thin.ttf');
+}
+
+
+@font-face {
+    font-family: TitleSpecial;
+    src: url('../fonts/Raleway/Raleway-Regular.ttf');
+}

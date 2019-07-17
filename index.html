@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BeCode | Limburg</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="row section" id="top">
+        <div class="overlay"></div>
+        <div class="col-12">
+            <h1 class="titleBeCode">Welcome to BeCode Limburg</h1>
+            <div id="countdown">
+                <p>Only 64 Days, 17 Hours, 22 Minutes and 5 Seconds to go till the next group starts. <br>
+                Want to be a part of it ?</p>
+                <a class="btn btn-banner hashlink" href="#info">Click to learn more</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info on the education program and BeCode in general -->
+    <div class="row section" id="info">
+        <div class="col-12">
+            <h2>Wat is BeCode?</h2>
+            <p>...</p>
+        </div>
+    </div>
+
+    <!-- Showing our local team as contact points, with a personal touch -->
+    <div class="row section" id="team">
+        <div class="col-12">
+            <h2>Meet the local team</h2>
+            <p>...</p>
+        </div>
+    </div>
+
+    <div class="row section" id="sponsors">
+        <div class="col-12">
+            <h2>Our sponsors</h2>
+            <p>...</p>
+        </div>
+    </div>
+
+    <script>
+        var links = document.getElementsByClassName("hashlink");
+        for(link of links) {
+            link.addEventListener("click", scrollToSection);
+        }
+
+        function scrollToSection(e) {
+            e.preventDefault();
+            console.dir(e);
+            var href = e.target.hash,
+                element = document.getElementById(href.substr(1));
+
+            console.log(href);
+            console.log(element);
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            window.setTimeout(function() {window.location.hash = href}, 500);
+        }
+    </script>
+</body>
+</html>

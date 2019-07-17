@@ -1,0 +1,53 @@
+@import "variables";
+
+/* === Standard grid classes === */
+.container {
+    width: map-get($default-map, container-w);
+    margin: auto; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.container-fluid {
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.row {
+    display: flex; 
+    flex-wrap: wrap;
+    margin: $row-margin 0px;
+}
+
+[class^="col-"] {
+    box-sizing: border-box;
+    padding: 0px map-get($default-map, col-padding);
+    margin: map-get($default-map, col-margin) 0px;
+}
+
+@for $i from 1 through $columns {
+    .col#{map-get($default-map, affix)}-#{$i} {
+        flex-basis: (100% * $i / $columns);
+    }
+}
+
+/* === Responsive Grid Classes === */
+@each $map in $breakpoint-map {
+    @if map-get($map, generate) {
+        @media only screen and (min-width: map-get($map, breakpoint)) {
+            .container {
+                width: map-get($map, container-w);
+            }
+            [class^="col-"] {
+                padding: 0px map-get($map, col-padding);
+                margin: map-get($map, col-margin) 0px;
+            }
+            @for $i from 1 through $columns {
+                .col#{map-get($map, affix)}-#{$i} {
+                    flex-basis: (100% * $i / $columns);
+                }
+            }
+        }
+    }
+}
