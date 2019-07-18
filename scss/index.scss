@@ -1,0 +1,159 @@
+@import "variables";
+// Top Banner
+.titleBeCode {
+  font-family: BeCode;
+}
+
+.titleLight {
+  font-family: TitleLight;
+}
+
+.titleSpecial {
+  font-family: TitleSpecial;
+}
+
+// === Define button styles ===
+.btn {
+  transition:.3s;
+  padding:12px 24px;
+  border-radius: 0;
+  display:inline-block;
+  text-align:center;
+  font-family: TitleSpecial;
+  text-decoration: none;
+  border: 2px solid;
+}
+
+.btn-block {
+  display:block;
+}
+
+.btn-outline-primary {
+  background-color:transparent;
+  border-color:$primary;
+  color:$primary;
+}
+
+.btn-primary {
+  background-color:$primary;
+  border-color:$primary;
+  color:#fff;
+}
+
+.btn-primary:hover {
+  background-color:$primary-active;
+  border-color:$primary-active;
+}
+
+.btn-outline-primary:hover {
+  border-color:$primary-active;
+  color: $primary-active;
+}
+
+// === Section styles ===
+section.container-fluid {
+  padding: 48px 0;
+  box-sizing:border-box;
+}
+
+.section-full {
+  min-height:100vh;
+}
+
+.section-half {
+  min-height:50vh;
+}
+
+.section-small {
+  min-height:30vh;
+}
+
+// === Set Default font family ===
+* {
+  font-family:BeCode;
+}
+
+
+
+
+// === Individual Section Styles ===
+// =================================
+
+// === Banner styles ===
+#top {
+  height:100vh;
+  width:100%;
+  background-color:#333;
+  .overlay {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    margin:0;
+    background-color:rgba(0,0,0,.4);
+  }
+}
+
+
+// === Info styles ===
+#info {
+  background-color:#fafafa;
+
+  #registrationTimeBlock {
+    display:block;
+    padding:32px 0;
+    margin-bottom:32px;
+    color:#555;
+    font-size:1.2em;
+    font-family: titleSpecial;
+    text-align: center;
+    border-bottom:1px solid #f0f0f0;
+  }
+}
+
+
+// === Sponsors styles ===
+#sponsors {
+  background-color:#fafafa;
+
+  .row .sponsor-col {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sponsor-image {
+    width:80%;
+    margin:auto;
+  }
+}
+
+// === Footer styles ===
+section#footer {
+  background-color:$secondary;
+  color:#fff;
+
+
+  .footer-list {
+    padding:0;
+    list-style:none;
+
+    &::after {
+      content:"";
+      height:50%;
+      width:2px;
+      background-color:$primary;
+      position:absolute;
+      right:0;
+      top:25%;
+
+    }
+  }
+}
+
+
+
+
+
+
