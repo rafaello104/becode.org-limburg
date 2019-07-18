@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>BeCode | Limburg</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/plugins/all.min.css">
+    <link rel="stylesheet" href="./css/cards.css">
+
+    <!-- Scripts -->
+    <script src="./js/index.js" defer></script>
 </head>
 <body>
 
@@ -18,7 +24,11 @@
             <div class="col-12">
                 <h1>Welcome to BeCode Limburg!</h1>
                 <div id="countdown">
-                    <a class="btn btn-outline-primary hashlink" href="#info">Click to learn more</a>
+                    <div class="timer">
+                        <h2>Join us !</h2>
+                        <p id="startTimeBlock">Calculating...</p>
+                        <a class="btn btn-outline-primary hashlink" href="#info">Click to learn more</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,10 +37,10 @@
 
 
 <!-- Info on the education program and BeCode in general -->
-<section class="container-fluid section-full" id="info">
+<section class="container-fluid section-half" id="info">
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12 col-md-8">
                 <h2 class="mb mt">What is BeCode?</h2>
                 <p class="">
                     BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.<br>
@@ -42,19 +52,19 @@
 
                 </p>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-md-12">
                         <h2>Time 'till registration closes</h2>
                         <p id="registrationTimeBlock">Calculating...</p>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                         <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary" target="_blank" referrerpolicy="no-referrer">Sign up!</a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-block btn-primary"><i class="fas fa-calendar-alt"></i></a>
                     </div>
                 </div>
@@ -66,11 +76,83 @@
 <!-- Showing our local team as contact points, with a personal touch -->
 <section class="container-fluid section-full" id="team">
     <div class="container">
+        <h2 class="container-title">Meet the local team!</h2>
+
         <div class="row">
             <div class="col-12">
-                <h2>Meet the local team</h2>
-                <p>...</p>
+                <h3 class="row-title">Coaches</h3>
             </div>
+
+            <div class="col-12 col-md-4">
+                <div class="profile-card">
+                    <img src="./images/rafael.jpeg" class="p-c-img" alt="BeCode coach Rafael.">
+                    <h4 class="p-c-name">Rafael</h4>
+                    <ul class="p-c-links">
+                        <li><a href="https://linkedin.com/in/codebull" target="_blank" referrerpolicy="no-referrer" class="linkedin" title="https://linkedin.com/in/codebull"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="" class="stackoverflow"><i class="fab fa-stack-overflow"></i></a></li>
+                        <li><a href="mailto:rafael@becode.org" title="rafael@becode.org" class="gmail"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="profile-card">
+                    <img src="./images/selene.jpeg" class="p-c-img" alt="BeCode coach Selene.">
+                    <h4 class="p-c-name">Selene</h4>
+                    <ul class="p-c-links">
+                        <li><a href="https://linkedin.com/in/selenenijst" target="_blank" referrerpolicy="no-referrer" class="linkedin" title="https://linkedin.com/in/selenenijst"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=UOxkGD8qRB4" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://github.com/SeleneNijst" target="_blank" referrerpolicy="no-referrer" class="github"><i class="fab fa-github"></i></a></li>
+                        <li><a href="mailto:selene@becode.org" title="selene@becode.org" class="gmail"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="profile-card">
+                    <div id="mystery-coach">
+                        <div></div>
+                    </div>
+                    <h4 class="p-c-name">Mystery Coach</h4>
+                    <ul class="p-c-links">
+                        <li><a href="" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="" class="github"><i class="fab fa-github"></i></a></li>
+                        <li><a href="" class="gmail"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row flex-center">
+            <h3 class="col-12 row-title">Support Staff</h3>
+
+            <div class="col-12 col-md-4">
+                <div class="profile-card">
+                    <img src="./images/an.jpeg" class="p-c-img" alt="BeCode marketing officer An.">
+                    <h4 class="p-c-name">An</h4>
+                    <ul class="p-c-links">
+                        <li><a href="" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="" class="gmail"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="profile-card">
+                    <img src="./images/sameer.jpeg" class="p-c-img" alt="BeCode junior coordinator Sameer.">
+                    <h4 class="p-c-name">Sameer</h4>
+                    <ul class="p-c-links">
+                        <li><a href="" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="" class="gmail"><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -84,13 +166,13 @@
             <div class="col-12">
                 <h2>Our sponsors for Limburg</h2>
                 <div class="row">
-                    <div class="sponsor-col col-4">
+                    <div class="sponsor-col col-6 col-lg-4">
                         <img src="./images/sponsors/VDAB.png" alt="Sponsor logo - VDAB" title="Sponsor logo for the company: VDAB" class="sponsor-image">
                     </div>
-                    <div class="sponsor-col col-4">
+                    <div class="sponsor-col col-6 col-lg-4">
                         <img src="./images/sponsors/ESF.png" alt="Sponsor logo - ESF" title="Sponsor logo for the company: ESF" class="sponsor-image">
                     </div>
-                    <div class="sponsor-col col-4">
+                    <div class="sponsor-col col-6 col-lg-4">
                         <img src="./images/sponsors/CLOSETHEGAP_TRANS.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
                     </div>
                 </div>
@@ -105,14 +187,14 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <h3>Useful links</h3>
 
                     <ul class="footer-list">
                         <li><a href="https://becode.org">BeCode.org Homepage</a></li>
                         <li><a href="https://www.becode.org/register/form_nl.html">Register now</a></li>
                         <li><a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">Event Calendar</a></li>
-                        <li><a href="#">Link</a></li>
+                        <li><a href="https://i.pinimg.com/originals/ef/50/15/ef50156cb1ec454be3c4e2addc5ad60c.jpg">Link</a></li>
                     </ul>
 
                     <br>
@@ -122,11 +204,11 @@
                         <li><a href="https://www.vdab.be/" target="_blank" referrerpolicy="no-referrer">VDAB</a></li>
                         <li><a href="https://ec.europa.eu/social/main.jsp?catId=325&langId=en" target="_blank" referrerpolicy="no-referrer">European Social Fund</a></li>
                         <li><a href="https://www.close-the-gap.org/" target="_blank" referrerpolicy="no-referrer">Close The Gap</a></li>
-                        <li><a href="#">Link</a></li>
+                        <li><a href="https://i.pinimg.com/originals/ef/50/15/ef50156cb1ec454be3c4e2addc5ad60c.jpg">Link</a></li>
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <h3>Get in contact</h3>
 
                     <ul class="footer-list">
@@ -140,7 +222,7 @@
                     <img src="./images/logo_Becode.png" alt="Logo of BeCode VZW" title="BeCode VZW Logo" class="footer-image"/>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-lg-4">
                     <h3>Contact us</h3>
 
                     <form action="#" method="post" id="contactForm">
@@ -163,6 +245,12 @@
                 </div>
             </div>
         </div>
+
+        <div class="row absolute-bottom">
+            <p>
+                All rights reserved to BeCode VZW
+            </p>
+        </div>
     </footer>
 </section>
 
@@ -170,85 +258,6 @@
 <!-- Temporary script tag until finalized html -->
 <script>
 
-    // Scroll function, that scrolls element into view and then adds hash after some time to the url
-    // =============================================================================================
-    var links = document.getElementsByClassName("hashlink");
-    for(link of links) {
-        link.addEventListener("click", scrollToSection);
-    }
-
-    function scrollToSection(e) {
-        e.preventDefault();
-        var href = e.target.hash,
-            element = document.getElementById(href.substr(1));
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        window.setTimeout(function() {window.location.hash = href}, 2000);
-    }
-
-
-    // Countdown clock functionality
-    // =============================
-    var countDownDate = new Date("Aug 25, 2019 17:00:00").getTime();
-
-    // Set up interval
-    var countdownInterval = setInterval(function() {
-        // Set the different time variables
-        var timeNow = new Date().getTime(),
-            timeDifference = countDownDate - timeNow;
-        days = addLeadingZero(Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
-        hours = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-        minutes = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)));
-        seconds = addLeadingZero(Math.floor((timeDifference % (1000 * 60)) / 1000));
-
-
-        document.querySelector("#registrationTimeBlock").innerHTML = days + " Days and " + hours + ":"
-            + minutes + ":" + seconds;
-
-        // If the count down is finished, write some text
-        if (timeDifference < 0) {
-            clearInterval(x);
-            document.querySelector("#registrationTimeBlock").innerHTML = "Registration for `Easley 1` has closed, we'll let you know when the next group will start as soon as possible !";
-        }
-    }, 1000);
-
-
-    // AJAX To send contact form functionality
-    // =======================================
-    var submit = document.getElementById("contactSubmit");
-    submit.addEventListener("click", sendForm);
-
-    function sendForm(e) {
-        e.preventDefault();
-
-        submit.firstElementChild.classList.toggle("fa-spin");
-        submit.firstElementChild.classList.toggle("fa-paper-plane");
-        submit.firstElementChild.classList.toggle("fa-spinner");
-
-
-
-
-        window.setTimeout(function() {
-            submit.firstElementChild.classList.toggle("fa-spin");
-            submit.firstElementChild.classList.toggle("fa-check");
-            submit.firstElementChild.classList.toggle("fa-spinner");
-        }, 2000);
-
-
-        window.setTimeout(function() {
-            submit.firstElementChild.classList.toggle("fa-check");
-            submit.firstElementChild.classList.toggle("fa-paper-plane");
-        }, 5000);
-    }
-
-    // Add leading zeros if any number is below 10
-    // ===========================================
-    function addLeadingZero(item) {
-        if (item < 10) {
-            item = "0" + item;
-        }
-
-        return item;
-    }
 </script>
 </body>
 </html>

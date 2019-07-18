@@ -86,6 +86,11 @@ section.container-fluid {
   margin-top:20px;
 }
 
+// === Utility classes ===
+.flex-center {
+  justify-content: center;
+}
+
 
 
 
@@ -220,6 +225,10 @@ section#footer {
 
       a {
         color:$secondary-active;
+        transition:.3s;
+        &:hover {
+          color:$primary;
+        }
       }
     }
   }
@@ -235,7 +244,7 @@ section#footer {
       input, textarea {
         background-color:transparent;
         border:0;
-        border-bottom:1px solid $primary;
+        border-bottom:1px solid $secondary-active;
         padding:4px 12px;
         padding-left:0;
         box-shadow:none;
@@ -243,6 +252,11 @@ section#footer {
         color:#fff;
         width:100%;
         margin:12px 0;
+        transition: .3s;
+
+        &:hover, &:active, &:focus {
+          border-color:$primary;
+        }
       }
 
       button {

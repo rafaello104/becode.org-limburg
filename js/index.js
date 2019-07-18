@@ -9,7 +9,7 @@ function scrollToSection(e) {
     e.preventDefault();
     var href = e.target.hash,
         element = document.getElementById(href.substr(1));
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     window.setTimeout(function() {window.location.hash = href}, 2000);
 }
 
