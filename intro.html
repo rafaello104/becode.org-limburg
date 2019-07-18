@@ -12,6 +12,7 @@
 
 <!-- Banner / Header for the website -->
 <section class="container-fluid section-full" id="top">
+    <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -30,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <h2>What is BeCode?</h2>
+                <h2 class="mb mt">What is BeCode?</h2>
                 <p class="">
                     BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.<br>
                     How does it work? Well, you apply to join our new program and we send you the instructions of what you need to do to qualify.
@@ -100,7 +101,7 @@
 
 
 <!-- Section holding the footer with it's content -->
-<section class="container-fluid section-small" id="footer">
+<section class="container-fluid section-xsmall" id="footer">
     <footer>
         <div class="container">
             <div class="row">
@@ -108,9 +109,19 @@
                     <h3>Useful links</h3>
 
                     <ul class="footer-list">
+                        <li><a href="https://becode.org">BeCode.org Homepage</a></li>
+                        <li><a href="https://www.becode.org/register/form_nl.html">Register now</a></li>
+                        <li><a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">Event Calendar</a></li>
                         <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
+                    </ul>
+
+                    <br>
+                    <h3>Our Sponsors</h3>
+
+                    <ul class="footer-list no-after">
+                        <li><a href="https://www.vdab.be/" target="_blank" referrerpolicy="no-referrer">VDAB</a></li>
+                        <li><a href="https://ec.europa.eu/social/main.jsp?catId=325&langId=en" target="_blank" referrerpolicy="no-referrer">European Social Fund</a></li>
+                        <li><a href="https://www.close-the-gap.org/" target="_blank" referrerpolicy="no-referrer">Close The Gap</a></li>
                         <li><a href="#">Link</a></li>
                     </ul>
                 </div>
@@ -119,22 +130,36 @@
                     <h3>Get in contact</h3>
 
                     <ul class="footer-list">
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
+                        <li><a href="mailto:rafael@becode.org">Rafael Lambelin</a> <small>(Coach)</small> </li>
+                        <li><a href="mailto:selene@becode.org">Selene Nijst</a> <small>(Coach)</small> </li>
+                        <li><a href="mailto:an@becode.org">An Cattie</a> <small>(Marketing Officer)</small> </li>
+                        <li><a href="mailto:sameer.srivasta@becode.org">Sameer Srivasta</a> <small>(Junior Coordinator)</small> </li>
                     </ul>
+
+                    <br>
+                    <img src="./images/logo_Becode.png" alt="Logo of BeCode VZW" title="BeCode VZW Logo" class="footer-image"/>
                 </div>
 
                 <div class="col-12 col-md-4">
-                    <h3>Sponsors</h3>
+                    <h3>Contact us</h3>
 
-                    <ul class="footer-list">
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                    </ul>
+                    <form action="#" method="post" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="fullName" name="fullName" placeholder="Your full name..."/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your email..."/>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" placeholder="Your message..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" id="contactSubmit"><i class="fas fa-paper-plane"></i> Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -144,6 +169,9 @@
 
 <!-- Temporary script tag until finalized html -->
 <script>
+
+    // Scroll function, that scrolls element into view and then adds hash after some time to the url
+    // =============================================================================================
     var links = document.getElementsByClassName("hashlink");
     for(link of links) {
         link.addEventListener("click", scrollToSection);
@@ -158,20 +186,19 @@
     }
 
 
-    // Countdown for registration closing
-    // ==================================
+    // Countdown clock functionality
+    // =============================
     var countDownDate = new Date("Aug 25, 2019 17:00:00").getTime();
 
     // Set up interval
-    // ===============
     var countdownInterval = setInterval(function() {
-
+        // Set the different time variables
         var timeNow = new Date().getTime(),
             timeDifference = countDownDate - timeNow;
-        days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)),
-            hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-            minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)),
-            seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            days = addLeadingZero(Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
+            hours = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+            minutes = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)));
+            seconds = addLeadingZero(Math.floor((timeDifference % (1000 * 60)) / 1000));
 
 
         document.querySelector("#registrationTimeBlock").innerHTML = days + " Days and " + hours + ":"
@@ -183,6 +210,45 @@
             document.querySelector("#registrationTimeBlock").innerHTML = "Registration for `Easley 1` has closed, we'll let you know when the next group will start as soon as possible !";
         }
     }, 1000);
+
+
+    // AJAX To send contact form functionality
+    // =======================================
+    var submit = document.getElementById("contactSubmit");
+    submit.addEventListener("click", sendForm);
+
+    function sendForm(e) {
+        e.preventDefault();
+
+        submit.firstElementChild.classList.toggle("fa-spin");
+        submit.firstElementChild.classList.toggle("fa-paper-plane");
+        submit.firstElementChild.classList.toggle("fa-spinner");
+
+
+
+
+        window.setTimeout(function() {
+            submit.firstElementChild.classList.toggle("fa-spin");
+            submit.firstElementChild.classList.toggle("fa-check");
+            submit.firstElementChild.classList.toggle("fa-spinner");
+        }, 2000);
+
+
+        window.setTimeout(function() {
+            submit.firstElementChild.classList.toggle("fa-check");
+            submit.firstElementChild.classList.toggle("fa-paper-plane");
+        }, 5000);
+    }
+
+    // Add leading zeros if any number is below 10
+    // ===========================================
+    function addLeadingZero(item) {
+        if (item < 10) {
+            item = "0" + item;
+        }
+
+        return item;
+    }
 </script>
 </body>
 </html>

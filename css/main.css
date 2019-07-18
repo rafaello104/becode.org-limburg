@@ -76,14 +76,28 @@ section.container-fluid {
   min-height: 30vh;
 }
 
+.section-xsmall {
+  min-height: 20vh;
+}
+
 * {
   font-family: BeCode;
+}
+
+.mb {
+  margin-bottom: 20px;
+}
+
+.mt {
+  margin-top: 20px;
 }
 
 #top {
   height: 100vh;
   width: 100%;
-  background-color: #333;
+  background-image: url("./../images/banner.jpg");
+  background-size: cover;
+  color: #fff;
 }
 #top .overlay {
   position: absolute;
@@ -94,6 +108,13 @@ section.container-fluid {
   margin: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
+#top .container {
+  position: relative;
+  z-index: 2;
+}
+#top .container .mtfix {
+  margin-top: 5px;
+}
 
 #info {
   background-color: #fafafa;
@@ -101,9 +122,8 @@ section.container-fluid {
 #info #registrationTimeBlock {
   display: block;
   padding: 32px 0;
-  margin-bottom: 32px;
   color: #555;
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-family: titleSpecial;
   text-align: center;
   border-bottom: 1px solid #f0f0f0;
@@ -126,18 +146,55 @@ section#footer {
   background-color: #16232e;
   color: #fff;
 }
+section#footer h3 {
+  margin-bottom: 12px;
+}
 section#footer .footer-list {
   padding: 0;
   list-style: none;
+  position: relative;
 }
 section#footer .footer-list::after {
   content: "";
   height: 50%;
-  width: 2px;
+  width: 1px;
   background-color: #63c3d1;
   position: absolute;
-  right: 0;
+  right: 10%;
   top: 25%;
+}
+section#footer .footer-list li {
+  line-height: 28px;
+}
+section#footer .footer-list li a {
+  color: #487296;
+}
+section#footer .footer-list.no-after::after {
+  display: none;
+}
+section#footer form .form-group {
+  width: 100%;
+}
+section#footer form .form-group input, section#footer form .form-group textarea {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #63c3d1;
+  padding: 4px 12px;
+  padding-left: 0;
+  box-shadow: none;
+  outline: 0;
+  color: #fff;
+  width: 100%;
+  margin: 12px 0;
+}
+section#footer form .form-group button {
+  cursor: pointer;
+  outline: 0;
+}
+section#footer .footer-image {
+  max-width: 150px;
+  margin-left: calc(40% - 75px);
+  margin-top: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
