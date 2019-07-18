@@ -90,7 +90,7 @@
     width: 546px;
   }
 
-  [class^=col-] {
+  [class*=col-] {
     padding: 0px 15px;
     margin: 5px 0px;
   }
@@ -148,7 +148,7 @@
     width: 728px;
   }
 
-  [class^=col-] {
+  [class*=col-] {
     padding: 0px 15px;
     margin: 5px 0px;
   }
@@ -206,7 +206,7 @@
     width: 942px;
   }
 
-  [class^=col-] {
+  [class*=col-] {
     padding: 0px 15px;
     margin: 5px 0px;
   }
@@ -264,7 +264,7 @@
     width: 1140px;
   }
 
-  [class^=col-] {
+  [class*=col-] {
     padding: 0px 15px;
     margin: 5px 0px;
   }

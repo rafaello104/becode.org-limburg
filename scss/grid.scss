@@ -39,7 +39,7 @@
             .container {
                 width: map-get($map, container-w);
             }
-            [class^="col-"] {
+            [class*="col-"] {
                 padding: 0px map-get($map, col-padding);
                 margin: map-get($map, col-margin) 0px;
             }
