@@ -16,8 +16,76 @@
 
 // Fix .row scss margin-top issue with body
 body {
-  margin-top:-15px;
+  /*margin-top:-15px;*/
 }
+.btn {
+  transition:.3s;
+  padding:12px 24px;
+  border-radius: 0;
+  display:block;
+  text-align:center;
+  font-family: TitleSpecial;
+  text-decoration: none;
+  border: 2px solid;
+}
+
+.btn-outline-primary {
+  background-color:transparent;
+  border-color:#00c29a;
+  color:#00c29a;
+}
+
+.btn-primary {
+  background-color:#00c29a;
+  border-color:#00c29a;
+  color:#333;
+}
+
+.btn-primary:hover {
+  background-color:#028267;
+  border-color:#028267;
+}
+
+.btn-outline-primary:hover {
+  border-color:#028267;
+  color: #028267;
+}
+
+.row {
+  margin:0;
+}
+
+* {
+  font-family:BeCode;
+}
+
+.infinite-scrolling {
+  overflow-x:auto;
+}
+
+.section {
+  padding:64px 0;
+}
+
+#info {
+  background-color:#fafafa;
+}
+
+#sponsors {
+  background-color:#fafafa;
+
+  .row .col-3 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sponsor-image {
+    width:90%;
+    margin:auto;
+  }
+}
+
 
 #top {
   height:100vh;
