@@ -30,7 +30,7 @@
   margin: 15px 0px;
 }
 
-[class^=col-] {
+[class*=col-] {
   box-sizing: border-box;
   padding: 0px 15px;
   margin: 5px 0px;

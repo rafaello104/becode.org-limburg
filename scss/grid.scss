@@ -20,7 +20,7 @@
     margin: $row-margin 0px;
 }
 
-[class^="col-"] {
+[class*="col-"] {
     box-sizing: border-box;
     padding: 0px map-get($default-map, col-padding);
     margin: map-get($default-map, col-margin) 0px;
