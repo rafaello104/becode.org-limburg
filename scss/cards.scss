@@ -1,0 +1,104 @@
+@import "variables";
+
+/* SCSS */
+
+%card-element-spacing {
+    margin: 10px 0px;
+}
+
+%underline {
+    padding-bottom: 5px;
+    border-bottom: 2px solid $primary-active;
+}
+
+
+
+
+/* CSS */
+
+.container-title, .row-title {
+    font-family: TitleSpecial;
+    text-align: center;
+}
+
+
+[class*="-card"] {
+    box-sizing: border-box;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+    background-color: $secondary;
+    
+    .p-c-img, #mystery-coach {
+        width: 100%;
+        border-bottom: 5px solid $primary-active;
+    }
+
+    #mystery-coach {
+        position: relative;
+        overflow: hidden;
+        
+        &>div {
+            
+            background: url("../images/mystery-coach.jpeg") round;
+            padding-bottom: 100%;
+            filter: blur(10px);
+        }
+        &::after {
+            content: "?";
+            color: #FFF;
+            font-size: 75px;
+            position: absolute;
+            top: 50%;  
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .p-c-name {
+        font-family: BeCode;
+        font-size: 20px;
+        color: $secondary-active;
+        @extend %card-element-spacing;
+
+        &::before {
+            content:"</ ";
+            color: $primary-active;
+        }
+        &::after {
+            content:" >";
+            color: $primary-active;
+        }
+    }
+
+    .p-c-links {
+        display: flex;
+        @extend %card-element-spacing;
+        
+        a {
+            padding: 5px 10px;
+            color: $secondary-active;
+            font-size: 25px;
+            transition: color .5s;
+        }
+        .linkedin:hover {
+            color: $linkedin;
+        }
+        .youtube:hover {
+            color: $youtube;
+        }
+        .github:hover {
+            color: $github;
+        }
+        .stackoverflow:hover {
+            color: $stackoverflow;
+        }
+        .gmail:hover {
+            color: $gmail;
+        }
+    }
+}

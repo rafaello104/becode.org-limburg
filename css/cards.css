@@ -1,0 +1,95 @@
+@font-face {
+  font-family: BeCode;
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: TitleLight;
+  src: url("../fonts/Lato/Lato-Thin.ttf");
+}
+@font-face {
+  font-family: TitleSpecial;
+  src: url("../fonts/Raleway/Raleway-Regular.ttf");
+}
+/* SCSS */
+.profile-card .p-c-links, .profile-card .p-c-name {
+  margin: 10px 0px;
+}
+
+/* CSS */
+.container-title, .row-title {
+  font-family: TitleSpecial;
+  text-align: center;
+}
+
+[class*=-card] {
+  box-sizing: border-box;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  background-color: #16232e;
+}
+.profile-card .p-c-img, .profile-card #mystery-coach {
+  width: 100%;
+  border-bottom: 5px solid #35a3b3;
+}
+.profile-card #mystery-coach {
+  position: relative;
+  overflow: hidden;
+}
+.profile-card #mystery-coach > div {
+  background: url("../images/mystery-coach.jpeg") round;
+  padding-bottom: 100%;
+  filter: blur(10px);
+}
+.profile-card #mystery-coach::after {
+  content: "?";
+  color: #FFF;
+  font-size: 75px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile-card .p-c-name {
+  font-family: BeCode;
+  font-size: 20px;
+  color: #487296;
+}
+.profile-card .p-c-name::before {
+  content: "</ ";
+  color: #35a3b3;
+}
+.profile-card .p-c-name::after {
+  content: " >";
+  color: #35a3b3;
+}
+.profile-card .p-c-links {
+  display: flex;
+}
+.profile-card .p-c-links a {
+  padding: 5px 10px;
+  color: #487296;
+  font-size: 25px;
+  transition: color 0.5s;
+}
+.profile-card .p-c-links .linkedin:hover {
+  color: #0077b5;
+}
+.profile-card .p-c-links .youtube:hover {
+  color: #ef4921;
+}
+.profile-card .p-c-links .github:hover {
+  color: #000000;
+}
+.profile-card .p-c-links .stackoverflow:hover {
+  color: #f48024;
+}
+.profile-card .p-c-links .gmail:hover {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=cards.css.map */
