@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/plugins/all.min.css">
 </head>
 <body>
     <div class="row" id="top">
@@ -32,15 +33,22 @@
                         You don't need any pre-existing knowledge to be able to join this education, all we ask from you is a good attitude and a whole bunch of motivation!
                         <br><br>
                         Interested? Come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">infosessions</a> to learn more <br>
-                        Super interested? Sign up right now! <a href="https://www.becode.org/register/form_nl.html" class="btn btn-outline-primary" target="_blank" referrerpolicy="no-referrer">Sign up!</a>
+                        Super interested? Sign up right now!
 
                     </p>
                 </div>
                 <div class="col-4">
-                    <h2></h2>
-                    <a href="https://calendar.google.com/calendar/ical/81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com/public/basic.ics" class="btn btn-outline-primary">Download Calendar for iphone</a>
-                    <br>
-                    <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-primary">View infosessions and other events</a>
+                    <h2>Time 'till registration closes</h2>
+                    <p id="registrationTimeBlock">Calculating...</p>
+                    <div class="row">
+                        <div class="col-8">
+                            <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary" target="_blank" referrerpolicy="no-referrer">Sign up!</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-primary"><i class="fas fa-calendar-alt"></i></a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,17 +72,14 @@
                 <div class="col-12">
                     <h2>Our sponsors</h2>
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-4">
                             <img src="./images/sponsors/VDAB.png" alt="Sponsor logo - VDAB" title="Sponsor logo for the company: VDAB" class="sponsor-image">
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <img src="./images/sponsors/ESF.png" alt="Sponsor logo - ESF" title="Sponsor logo for the company: ESF" class="sponsor-image">
                         </div>
-                        <div class="col-3">
-                            <img src="./images/sponsors/CLOSETHEGAP.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-                        </div>
-                        <div class="col-3">
-                            <img src="./images/sponsors/VDAB.png" alt="Sponsor logo - ..." title="Sponsor logo for the company: " class="sponsor-image">
+                        <div class="col-4">
+                            <img src="./images/sponsors/CLOSETHEGAP_TRANSP.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
                         </div>
                     </div>
                 </div>
@@ -105,6 +110,33 @@
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
             window.setTimeout(function() {window.location.hash = href}, 500);
         }
+
+
+        // Countdown for registration closing
+        // ==================================
+        var countDownDate = new Date("Aug 25, 2019 17:00:00").getTime();
+
+        // Set up interval
+        // ===============
+        var countdownInterval = setInterval(function() {
+
+            var timeNow = new Date().getTime(),
+                timeDifference = countDownDate - timeNow;
+                days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)),
+                hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)),
+                seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+
+            document.querySelector("#registrationTimeBlock").innerHTML = days + " Days and " + hours + ":"
+                + minutes + ":" + seconds;
+
+            // If the count down is finished, write some text
+            if (timeDifference < 0) {
+                clearInterval(x);
+                document.querySelector("#registrationTimeBlock").innerHTML = "Registration for `Easley 1` has closed, we'll let you know when the next group will start as soon as possible !";
+            }
+        }, 1000);
     </script>
 </body>
 </html>

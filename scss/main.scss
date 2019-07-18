@@ -22,37 +22,41 @@ body {
   transition:.3s;
   padding:12px 24px;
   border-radius: 0;
-  display:block;
+  display:inline-block;
   text-align:center;
   font-family: TitleSpecial;
   text-decoration: none;
   border: 2px solid;
 }
 
+.btn-block {
+  display:block;
+}
+
 .btn-outline-primary {
   background-color:transparent;
-  border-color:#00c29a;
-  color:#00c29a;
+  border-color:$primary;
+  color:$primary;
 }
 
 .btn-primary {
-  background-color:#00c29a;
-  border-color:#00c29a;
+  background-color:$primary;
+  border-color:$primary;
   color:#333;
 }
 
 .btn-primary:hover {
-  background-color:#028267;
-  border-color:#028267;
+  background-color:$primary-active;
+  border-color:$primary-active;
 }
 
 .btn-outline-primary:hover {
-  border-color:#028267;
-  color: #028267;
+  border-color:$primary-active;
+  color: $primary-active;
 }
 
 .row {
-  margin:0;
+  margin:0 -15px;
 }
 
 * {
@@ -69,6 +73,17 @@ body {
 
 #info {
   background-color:#fafafa;
+
+  #registrationTimeBlock {
+    display:block;
+    padding:32px 0;
+    margin-bottom:32px;
+    color:#555;
+    font-size:1.2em;
+    font-family: titleSpecial;
+    text-align: center;
+    border-bottom:1px solid #f0f0f0;
+  }
 }
 
 #sponsors {

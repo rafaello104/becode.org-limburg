@@ -30,11 +30,15 @@ body {
   transition: 0.3s;
   padding: 12px 24px;
   border-radius: 0;
-  display: block;
+  display: inline-block;
   text-align: center;
   font-family: TitleSpecial;
   text-decoration: none;
   border: 2px solid;
+}
+
+.btn-block {
+  display: block;
 }
 
 .btn-outline-primary {
@@ -60,7 +64,7 @@ body {
 }
 
 .row {
-  margin: 0;
+  margin: 0 -15px;
 }
 
 * {
@@ -77,6 +81,16 @@ body {
 
 #info {
   background-color: #fafafa;
+}
+#info #registrationTimeBlock {
+  display: block;
+  padding: 32px 0;
+  margin-bottom: 32px;
+  color: #555;
+  font-size: 1.2em;
+  font-family: titleSpecial;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 #sponsors {
