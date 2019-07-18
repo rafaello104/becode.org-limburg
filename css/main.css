@@ -43,24 +43,24 @@ body {
 
 .btn-outline-primary {
   background-color: transparent;
-  border-color: #00c29a;
-  color: #00c29a;
+  border-color: #63c3d1;
+  color: #63c3d1;
 }
 
 .btn-primary {
-  background-color: #00c29a;
-  border-color: #00c29a;
+  background-color: #63c3d1;
+  border-color: #63c3d1;
   color: #333;
 }
 
 .btn-primary:hover {
-  background-color: #028267;
-  border-color: #028267;
+  background-color: #35a3b3;
+  border-color: #35a3b3;
 }
 
 .btn-outline-primary:hover {
-  border-color: #028267;
-  color: #028267;
+  border-color: #35a3b3;
+  color: #35a3b3;
 }
 
 .row {

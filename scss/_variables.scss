@@ -74,8 +74,8 @@ $breakpoint-map: (
 
 
 // === Color variables ===
-$primary: #00c29a;
-$primary-active: #028267;
+$primary: #63c3d1;
+$primary-active: darken($primary, 15%);
 
 $secondary: #16232e;
 $secondary-active: lighten($secondary, 15%);
