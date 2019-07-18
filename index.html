@@ -6,60 +6,249 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/plugins/all.min.css">
 </head>
 <body>
-    <div class="row section" id="top">
-        <div class="overlay"></div>
-        <div class="col-12">
-            <h1 class="titleBeCode">Welcome to BeCode Limburg</h1>
-            <div id="countdown">
-                <p>Only 64 Days, 17 Hours, 22 Minutes and 5 Seconds to go till the next group starts. <br>
-                Want to be a part of it ?</p>
-                <a class="btn btn-banner hashlink" href="#info">Click to learn more</a>
+
+<!-- Banner / Header for the website -->
+<section class="container-fluid section-full" id="top">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Welcome to BeCode Limburg!</h1>
+                <div id="countdown">
+                    <a class="btn btn-outline-primary hashlink" href="#info">Click to learn more</a>
+                </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Info on the education program and BeCode in general -->
-    <div class="row section" id="info">
-        <div class="col-12">
-            <h2>Wat is BeCode?</h2>
-            <p>...</p>
+
+<!-- Info on the education program and BeCode in general -->
+<section class="container-fluid section-full" id="info">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h2 class="mb mt">What is BeCode?</h2>
+                <p class="">
+                    BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.<br>
+                    How does it work? Well, you apply to join our new program and we send you the instructions of what you need to do to qualify.
+                    You don't need any pre-existing knowledge to be able to join this education, all we ask from you is a good attitude and a whole bunch of motivation!
+                    <br><br>
+                    Interested? Come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">infosessions</a> to learn more <br>
+                    Super interested? Sign up right now!
+
+                </p>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Time 'till registration closes</h2>
+                        <p id="registrationTimeBlock">Calculating...</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-8">
+                        <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary" target="_blank" referrerpolicy="no-referrer">Sign up!</a>
+                    </div>
+                    <div class="col-4">
+                        <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-block btn-primary"><i class="fas fa-calendar-alt"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Showing our local team as contact points, with a personal touch -->
-    <div class="row section" id="team">
-        <div class="col-12">
-            <h2>Meet the local team</h2>
-            <p>...</p>
+<!-- Showing our local team as contact points, with a personal touch -->
+<section class="container-fluid section-full" id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Meet the local team</h2>
+                <p>...</p>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="row section" id="sponsors">
-        <div class="col-12">
-            <h2>Our sponsors</h2>
-            <p>...</p>
+
+
+<!-- Section containing the logo's of our sponsors -->
+<section class="container-fluid section-small" id="sponsors">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Our sponsors for Limburg</h2>
+                <div class="row">
+                    <div class="sponsor-col col-4">
+                        <img src="./images/sponsors/VDAB.png" alt="Sponsor logo - VDAB" title="Sponsor logo for the company: VDAB" class="sponsor-image">
+                    </div>
+                    <div class="sponsor-col col-4">
+                        <img src="./images/sponsors/ESF.png" alt="Sponsor logo - ESF" title="Sponsor logo for the company: ESF" class="sponsor-image">
+                    </div>
+                    <div class="sponsor-col col-4">
+                        <img src="./images/sponsors/CLOSETHEGAP_TRANS.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <script>
-        var links = document.getElementsByClassName("hashlink");
-        for(link of links) {
-            link.addEventListener("click", scrollToSection);
+
+<!-- Section holding the footer with it's content -->
+<section class="container-fluid section-xsmall" id="footer">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h3>Useful links</h3>
+
+                    <ul class="footer-list">
+                        <li><a href="https://becode.org">BeCode.org Homepage</a></li>
+                        <li><a href="https://www.becode.org/register/form_nl.html">Register now</a></li>
+                        <li><a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">Event Calendar</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+
+                    <br>
+                    <h3>Our Sponsors</h3>
+
+                    <ul class="footer-list no-after">
+                        <li><a href="https://www.vdab.be/" target="_blank" referrerpolicy="no-referrer">VDAB</a></li>
+                        <li><a href="https://ec.europa.eu/social/main.jsp?catId=325&langId=en" target="_blank" referrerpolicy="no-referrer">European Social Fund</a></li>
+                        <li><a href="https://www.close-the-gap.org/" target="_blank" referrerpolicy="no-referrer">Close The Gap</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h3>Get in contact</h3>
+
+                    <ul class="footer-list">
+                        <li><a href="mailto:rafael@becode.org">Rafael Lambelin</a> <small>(Coach)</small> </li>
+                        <li><a href="mailto:selene@becode.org">Selene Nijst</a> <small>(Coach)</small> </li>
+                        <li><a href="mailto:an@becode.org">An Cattie</a> <small>(Marketing Officer)</small> </li>
+                        <li><a href="mailto:sameer.srivasta@becode.org">Sameer Srivasta</a> <small>(Junior Coordinator)</small> </li>
+                    </ul>
+
+                    <br>
+                    <img src="./images/logo_Becode.png" alt="Logo of BeCode VZW" title="BeCode VZW Logo" class="footer-image"/>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h3>Contact us</h3>
+
+                    <form action="#" method="post" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="fullName" name="fullName" placeholder="Your full name..."/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your email..."/>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" placeholder="Your message..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" id="contactSubmit"><i class="fas fa-paper-plane"></i> Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+
+<!-- Temporary script tag until finalized html -->
+<script>
+
+    // Scroll function, that scrolls element into view and then adds hash after some time to the url
+    // =============================================================================================
+    var links = document.getElementsByClassName("hashlink");
+    for(link of links) {
+        link.addEventListener("click", scrollToSection);
+    }
+
+    function scrollToSection(e) {
+        e.preventDefault();
+        var href = e.target.hash,
+            element = document.getElementById(href.substr(1));
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        window.setTimeout(function() {window.location.hash = href}, 2000);
+    }
+
+
+    // Countdown clock functionality
+    // =============================
+    var countDownDate = new Date("Aug 25, 2019 17:00:00").getTime();
+
+    // Set up interval
+    var countdownInterval = setInterval(function() {
+        // Set the different time variables
+        var timeNow = new Date().getTime(),
+            timeDifference = countDownDate - timeNow;
+        days = addLeadingZero(Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
+        hours = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+        minutes = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)));
+        seconds = addLeadingZero(Math.floor((timeDifference % (1000 * 60)) / 1000));
+
+
+        document.querySelector("#registrationTimeBlock").innerHTML = days + " Days and " + hours + ":"
+            + minutes + ":" + seconds;
+
+        // If the count down is finished, write some text
+        if (timeDifference < 0) {
+            clearInterval(x);
+            document.querySelector("#registrationTimeBlock").innerHTML = "Registration for `Easley 1` has closed, we'll let you know when the next group will start as soon as possible !";
+        }
+    }, 1000);
+
+
+    // AJAX To send contact form functionality
+    // =======================================
+    var submit = document.getElementById("contactSubmit");
+    submit.addEventListener("click", sendForm);
+
+    function sendForm(e) {
+        e.preventDefault();
+
+        submit.firstElementChild.classList.toggle("fa-spin");
+        submit.firstElementChild.classList.toggle("fa-paper-plane");
+        submit.firstElementChild.classList.toggle("fa-spinner");
+
+
+
+
+        window.setTimeout(function() {
+            submit.firstElementChild.classList.toggle("fa-spin");
+            submit.firstElementChild.classList.toggle("fa-check");
+            submit.firstElementChild.classList.toggle("fa-spinner");
+        }, 2000);
+
+
+        window.setTimeout(function() {
+            submit.firstElementChild.classList.toggle("fa-check");
+            submit.firstElementChild.classList.toggle("fa-paper-plane");
+        }, 5000);
+    }
+
+    // Add leading zeros if any number is below 10
+    // ===========================================
+    function addLeadingZero(item) {
+        if (item < 10) {
+            item = "0" + item;
         }
 
-        function scrollToSection(e) {
-            e.preventDefault();
-            console.dir(e);
-            var href = e.target.hash,
-                element = document.getElementById(href.substr(1));
-
-            console.log(href);
-            console.log(element);
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            window.setTimeout(function() {window.location.hash = href}, 500);
-        }
-    </script>
+        return item;
+    }
+</script>
 </body>
 </html>

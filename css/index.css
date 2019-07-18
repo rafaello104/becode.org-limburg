@@ -99,6 +99,16 @@ section.container-fluid {
   background-size: cover;
   color: #fff;
 }
+#top .col-12 {
+  justify-content: center;
+}
+#top h1 {
+  font-size: 4em;
+  text-align: center;
+}
+#top .btn {
+  margin: auto;
+}
 #top .overlay {
   position: absolute;
   left: 0;
@@ -106,7 +116,7 @@ section.container-fluid {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 #top .container {
   position: relative;
