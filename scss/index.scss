@@ -111,9 +111,19 @@ section.container-fluid {
     justify-content: center;
     align-items: center;
 
-    a, div {
-      margin:24px 0;
+    .timer {
+      margin-top:48px;
+      text-align: center;
+      a, div {
+        margin:24px 0;
+      }
+
+      #startTimeBlock {
+        font-size:2em;
+      }
     }
+
+
   }
 
   h1 {
@@ -274,13 +284,17 @@ section#footer {
 
     .footer-list {
       margin-bottom:24px;
-      ::after {
+      &::after {
         display:none;
       }
-
     }
   }
 
+  #info, #team, #sponsors {
+    h2, h3 {
+      text-align: center;
+    }
+  }
 
 }
 

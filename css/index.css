@@ -107,8 +107,15 @@ section.container-fluid {
   justify-content: center;
   align-items: center;
 }
-#top #countdown a, #top #countdown div {
+#top #countdown .timer {
+  margin-top: 48px;
+  text-align: center;
+}
+#top #countdown .timer a, #top #countdown .timer div {
   margin: 24px 0;
+}
+#top #countdown .timer #startTimeBlock {
+  font-size: 2em;
 }
 #top h1 {
   font-size: 4em;
@@ -238,8 +245,12 @@ section#footer .absolute-bottom {
   section#footer .footer-list {
     margin-bottom: 24px;
   }
-  section#footer .footer-list ::after {
+  section#footer .footer-list::after {
     display: none;
+  }
+
+  #info h2, #info h3, #team h2, #team h3, #sponsors h2, #sponsors h3 {
+    text-align: center;
   }
 }
 

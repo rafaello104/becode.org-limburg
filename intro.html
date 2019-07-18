@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>BeCode | Limburg</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/plugins/all.min.css">
+
+    <!-- Scripts -->
+    <script src="./js/index.js" defer></script>
 </head>
 <body>
 
@@ -18,7 +23,11 @@
             <div class="col-12">
                 <h1>Welcome to BeCode Limburg!</h1>
                 <div id="countdown">
-                    <a class="btn btn-outline-primary hashlink" href="#info">Click to learn more</a>
+                    <div class="timer">
+                        <h2>Join us !</h2>
+                        <p id="startTimeBlock">Calculating...</p>
+                        <a class="btn btn-outline-primary hashlink" href="#info">Click to learn more</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,7 +39,7 @@
 <section class="container-fluid section-half" id="info">
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12 col-md-8">
                 <h2 class="mb mt">What is BeCode?</h2>
                 <p class="">
                     BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.<br>
@@ -42,19 +51,19 @@
 
                 </p>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-md-12">
                         <h2>Time 'till registration closes</h2>
                         <p id="registrationTimeBlock">Calculating...</p>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                         <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary" target="_blank" referrerpolicy="no-referrer">Sign up!</a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-block btn-primary"><i class="fas fa-calendar-alt"></i></a>
                     </div>
                 </div>

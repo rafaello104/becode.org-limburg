@@ -16,28 +16,32 @@ function scrollToSection(e) {
 
 // Countdown clock functionality
 // =============================
-var countDownDate = new Date("Aug 25, 2019 17:00:00").getTime();
+startCountdown(document.querySelector("#registrationTimeBlock"), new Date("Aug 25, 2019 17:00:00").getTime());
+startCountdown(document.querySelector("#startTimeBlock"), new Date("Sep 3, 2019 09:00:00").getTime());
 
-// Set up interval
-var countdownInterval = setInterval(function() {
-    // Set the different time variables
-    var timeNow = new Date().getTime(),
-        timeDifference = countDownDate - timeNow;
-    days = addLeadingZero(Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
-    hours = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-    minutes = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)));
-    seconds = addLeadingZero(Math.floor((timeDifference % (1000 * 60)) / 1000));
+// Create a function for multi-countdowns on the page, ask for element to show countdown as well as the datetime to countdown to
+// =============================================================================================================================
+function startCountdown(elem, countDownDate) {
+    var countdownInterval = setInterval(function () {
+        // Set the different time variables
+        var timeNow = new Date().getTime(),
+            timeDifference = countDownDate - timeNow;
+        days = addLeadingZero(Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
+        hours = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+        minutes = addLeadingZero(Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)));
+        seconds = addLeadingZero(Math.floor((timeDifference % (1000 * 60)) / 1000));
 
 
-    document.querySelector("#registrationTimeBlock").innerHTML = days + " Days and " + hours + ":"
-        + minutes + ":" + seconds;
+        elem.innerHTML = days + " Days and " + hours + ":"
+            + minutes + ":" + seconds;
 
-    // If the count down is finished, write some text
-    if (timeDifference < 0) {
-        clearInterval(x);
-        document.querySelector("#registrationTimeBlock").innerHTML = "Registration for `Easley 1` has closed, we'll let you know when the next group will start as soon as possible !";
-    }
-}, 1000);
+        // If the count down is finished, write some text
+        if (timeDifference < 0) {
+            clearInterval(x);
+            document.querySelector("#registrationTimeBlock").innerHTML = "Registration for `Easley 1` has closed, we'll let you know when the next group will start as soon as possible !";
+        }
+    }, 1000);
+}
 
 
 // AJAX To send contact form functionality
