@@ -3,7 +3,7 @@
 /* SCSS */
 
 %card-element-spacing {
-    margin: 10px 0px;
+    margin: 15px 0px;
 }
 
 %underline {
@@ -15,6 +15,11 @@
 
 
 /* CSS */
+
+.row {
+    justify-content: center;
+    margin: 0px;
+}
 
 .container-title, .row-title {
     font-family: TitleSpecial;
@@ -29,13 +34,14 @@
 .profile-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    max-width: 350px;
+    height: 100%;
+    margin: auto;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
     background-color: $secondary;
     
     .p-c-img, #mystery-coach {
         width: 100%;
-        border-bottom: 5px solid $primary-active;
     }
 
     #mystery-coach {
@@ -43,7 +49,6 @@
         overflow: hidden;
         
         &>div {
-            
             background: url("../images/mystery-coach.jpeg") round;
             padding-bottom: 100%;
             filter: blur(10px);
@@ -59,31 +64,73 @@
         }
     }
 
+    .p-c-titles {
+        text-align: center;
+        padding: 15px 0px;
+        border-top: 5px solid $primary-active;
+        * {
+            margin: 10px 0px;
+        }
+    }
+
     .p-c-name {
         font-family: BeCode;
-        font-size: 20px;
-        color: $secondary-active;
-        @extend %card-element-spacing;
+        font-size: 1.5rem;
+        color: $primary-active;
+    }
 
+    .p-c-title {
+        font-family: BeCode;
+        font-size: 0.8rem;
+        color: $secondary-active;
         &::before {
             content:"</ ";
-            color: $primary-active;
         }
         &::after {
             content:" >";
-            color: $primary-active;
+        }
+    }
+    
+    [class*="p-c-quote-"] {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0px 30px;
+        font-family: BeCode;
+        color: $secondary-active;
+        @extend %card-element-spacing
+    }
+    
+    .p-c-quote-content { 
+        text-align: justify;
+        margin-bottom: auto;
+        font-size: 0.9rem;
+        &::before, &::after {
+            content:'"';
+        }
+    }
+
+    .p-c-quote-author {
+        text-align: right;
+        font-style: italic;
+        font-size: 0.7rem;
+        &::before {
+            content:'-';
         }
     }
 
     .p-c-links {
         display: flex;
-        @extend %card-element-spacing;
-        
+        justify-content: center;
+        width: 100%;
+        padding: 5px 0px;
+        background-color: rgba(0,0,0,0.5);
         a {
-            padding: 5px 10px;
             color: $secondary-active;
-            font-size: 25px;
+            font-size: 1.5rem;
             transition: color .5s;
+            * {
+                padding: 5px 10px;
+            }
         }
         .linkedin:hover {
             color: $linkedin;
@@ -101,4 +148,26 @@
             color: $gmail;
         }
     }
+}
+
+.iframe-wrapper {
+    position: relative;
+    display: none;
+    padding-bottom: 56.25%;
+    height: 0;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: 100%;
+    }
+}
+
+.display {
+    display: flex;
+}
+
+#selene {
+    transform: rotateZ(90deg);
 }

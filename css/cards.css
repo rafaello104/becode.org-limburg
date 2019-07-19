@@ -11,11 +11,16 @@
   src: url("../fonts/Raleway/Raleway-Regular.ttf");
 }
 /* SCSS */
-.profile-card .p-c-links, .profile-card .p-c-name {
-  margin: 10px 0px;
+.profile-card [class*=p-c-quote-] {
+  margin: 15px 0px;
 }
 
 /* CSS */
+.row {
+  justify-content: center;
+  margin: 0px;
+}
+
 .container-title, .row-title {
   font-family: TitleSpecial;
   text-align: center;
@@ -28,13 +33,14 @@
 .profile-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 350px;
+  height: 100%;
+  margin: auto;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
   background-color: #16232e;
 }
 .profile-card .p-c-img, .profile-card #mystery-coach {
   width: 100%;
-  border-bottom: 5px solid #35a3b3;
 }
 .profile-card #mystery-coach {
   position: relative;
@@ -54,27 +60,67 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.profile-card .p-c-titles {
+  text-align: center;
+  padding: 15px 0px;
+  border-top: 5px solid #35a3b3;
+}
+.profile-card .p-c-titles * {
+  margin: 10px 0px;
+}
 .profile-card .p-c-name {
   font-family: BeCode;
-  font-size: 20px;
+  font-size: 1.5rem;
+  color: #35a3b3;
+}
+.profile-card .p-c-title {
+  font-family: BeCode;
+  font-size: 0.8rem;
   color: #487296;
 }
-.profile-card .p-c-name::before {
+.profile-card .p-c-title::before {
   content: "</ ";
-  color: #35a3b3;
 }
-.profile-card .p-c-name::after {
+.profile-card .p-c-title::after {
   content: " >";
-  color: #35a3b3;
+}
+.profile-card [class*=p-c-quote-] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 30px;
+  font-family: BeCode;
+  color: #487296;
+}
+.profile-card .p-c-quote-content {
+  text-align: justify;
+  margin-bottom: auto;
+  font-size: 0.9rem;
+}
+.profile-card .p-c-quote-content::before, .profile-card .p-c-quote-content::after {
+  content: '"';
+}
+.profile-card .p-c-quote-author {
+  text-align: right;
+  font-style: italic;
+  font-size: 0.7rem;
+}
+.profile-card .p-c-quote-author::before {
+  content: "-";
 }
 .profile-card .p-c-links {
   display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .profile-card .p-c-links a {
-  padding: 5px 10px;
   color: #487296;
-  font-size: 25px;
+  font-size: 1.5rem;
   transition: color 0.5s;
+}
+.profile-card .p-c-links a * {
+  padding: 5px 10px;
 }
 .profile-card .p-c-links .linkedin:hover {
   color: #0077b5;
@@ -90,6 +136,28 @@
 }
 .profile-card .p-c-links .gmail:hover {
   color: #FFFFFF;
+}
+
+.iframe-wrapper {
+  position: relative;
+  display: none;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 100%;
+}
+
+.display {
+  display: flex;
+}
+
+#selene {
+  transform: rotateZ(90deg);
 }
 
 /*# sourceMappingURL=cards.css.map */
