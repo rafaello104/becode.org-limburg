@@ -81,3 +81,27 @@ function addLeadingZero(item) {
 
     return item;
 }
+
+
+// iFrame functionality (play youtube videos in the iFrame)
+// ========================================================
+let songs = document.getElementsByClassName("youtube");
+let frame = document.getElementById("frame");
+
+for (song of songs) {
+    song.addEventListener("click", function(e) {
+        e.preventDefault();
+        console.dir(e);
+        if (!frame.parentElement.classList.contains("display")) {
+            frame.parentElement.classList.add("display")
+        }
+        frame.setAttribute("src", "https://www.youtube.com/embed/" + e.target.parentElement.hash.slice(1))
+        frame.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+        window.setTimeout(function() {
+            window.location.hash = "#frame";
+        })
+    })
+}
