@@ -1,4 +1,5 @@
 # Webpage: Becode.org/limburg
+Find the website here: [https://rafaello104.github.io/website-limburg](https://rafaello104.github.io/website-limburg)
 
 ## Design
 We're going for a contemporary design that will outlay the quality of BeCode Limburg as well as work well with the original website.
@@ -24,8 +25,6 @@ We aim to work with the original design, not collide with it whilst at the same 
 1. Partners section: Marquee of partner logo's
 
 1. **Possibly**: Picture of our juniors holding up the condoms in a group, with the title above it: "Join the fun at becode!", this could be done with a nice parallax background
-
-1. 
 
 > (\*) Have link to favourite youtube song, click and youtube song starts playing in profile picture area
 
