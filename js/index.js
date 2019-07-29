@@ -44,6 +44,16 @@ function startCountdown(elem, countDownDate) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 // AJAX To send contact form functionality
 // =======================================
 var submit = document.getElementById("contactSubmit");
@@ -51,7 +61,31 @@ submit.addEventListener("click", sendForm);
 
 function sendForm(e) {
     e.preventDefault();
+    animateIcon();
 
+    let nameInput = document.getElementById("fullName"),
+        emailInput = document.getElementById("email"),
+        messageInput = document.getElementById("message"),
+        postData = JSON.stringify({"fullName": nameInput.value, "email": emailInput.value, "message": messageInput.value});
+
+    const request = new XMLHttpRequest();
+
+    request.addEventListener('load', function () {
+        if (this.readyState === 4 && this.status === 200) {
+            console.log(this.responseText);
+        }
+        else {
+            console.log("Error code: " + this.status);
+        }
+    });
+
+    request.open('POST', 'https://genk.becode.xyz/mail', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send(postData);
+
+}
+
+function animateIcon() {
     submit.firstElementChild.classList.toggle("fa-spin");
     submit.firstElementChild.classList.toggle("fa-paper-plane");
     submit.firstElementChild.classList.toggle("fa-spinner");
@@ -71,6 +105,33 @@ function sendForm(e) {
         submit.firstElementChild.classList.toggle("fa-paper-plane");
     }, 5000);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Add leading zeros if any number is below 10
 // ===========================================
