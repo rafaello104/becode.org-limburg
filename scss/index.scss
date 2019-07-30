@@ -181,15 +181,54 @@ section.container-fluid {
 #sponsors {
   background-color:#fafafa;
 
-  .row .sponsor-col {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  h2 {
+    color:#555;
+    margin-bottom:48px;
   }
 
-  .sponsor-image {
-    width:80%;
-    margin:auto;
+  #sponsor-rows-holder {
+    display:flex;
+    flex-wrap:nowrap;
+    height: 150px;
+    overflow:hidden;
+
+
+    .row.sponsor-row {
+      display: flex;
+      height:100%;
+      align-items: center;
+      flex-wrap: nowrap;
+      animation: marquee 5s linear infinite;
+
+
+      .sponsor-image {
+        width: 150px;
+        margin: 24px;
+        filter: grayscale(100%);
+        transition: .3s;
+        cursor: pointer;
+        opacity: .7;
+
+
+        &:hover {
+          filter: grayscale(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(-100%, 0);
+        }
+      }
+    }
+
+    .sponsor-row-2 {
+      animation-delay: 2.5s;
+    }
   }
 }
 

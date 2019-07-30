@@ -161,14 +161,45 @@ section.container-fluid {
 #sponsors {
   background-color: #fafafa;
 }
-#sponsors .row .sponsor-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#sponsors h2 {
+  color: #555;
+  margin-bottom: 48px;
 }
-#sponsors .sponsor-image {
-  width: 80%;
-  margin: auto;
+#sponsors #sponsor-rows-holder {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 150px;
+  overflow: hidden;
+}
+#sponsors #sponsor-rows-holder .row.sponsor-row {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-wrap: nowrap;
+  animation: marquee 5s linear infinite;
+}
+#sponsors #sponsor-rows-holder .row.sponsor-row .sponsor-image {
+  width: 150px;
+  margin: 24px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0.7;
+}
+#sponsors #sponsor-rows-holder .row.sponsor-row .sponsor-image:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+#sponsors #sponsor-rows-holder .sponsor-row-2 {
+  animation-delay: 2.5s;
 }
 
 section#footer {
