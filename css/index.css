@@ -96,6 +96,10 @@ section.container-fluid {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 #top {
   height: 100vh;
   width: 100%;
