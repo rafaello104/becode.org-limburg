@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e40299e-d582-43e0-999e-3c6c8378a25b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/index.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="232">
@@ -44,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scss/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4536">
-              <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
+            <state relative-caret-position="504">
+              <caret line="282" column="30" selection-start-line="282" selection-start-column="30" selection-end-line="282" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -93,7 +97,6 @@
         <option value="$PROJECT_DIR$/selene.html" />
         <option value="$PROJECT_DIR$/scss/cards.scss" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/scss/index.scss" />
         <option value="$PROJECT_DIR$/js/flipclock.js" />
         <option value="$PROJECT_DIR$/js/flipclock.min.js" />
         <option value="$PROJECT_DIR$/scss/flipclock.scss" />
@@ -101,6 +104,7 @@
         <option value="$PROJECT_DIR$/js/scroller.js" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scss/index.scss" />
       </list>
     </option>
   </component>
@@ -206,12 +210,12 @@
       <workItem from="1563497324704" duration="734000" />
       <workItem from="1564388356183" duration="1915000" />
       <workItem from="1564479680703" duration="4962000" />
-      <workItem from="1564567579964" duration="11880000" />
+      <workItem from="1564567579964" duration="11953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50680000" />
+    <option name="totallyTimeSpent" value="50753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
@@ -345,13 +349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4536">
-          <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
@@ -379,6 +376,13 @@
             <element signature="n#section#3;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#4;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="282" column="30" selection-start-line="282" selection-start-column="30" selection-end-line="282" selection-end-column="30" />
         </state>
       </provider>
     </entry>

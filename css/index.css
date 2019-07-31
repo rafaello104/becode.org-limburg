@@ -236,11 +236,12 @@ section#footer .footer-list li {
   line-height: 28px;
 }
 section#footer .footer-list li a {
-  color: #487296;
+  color: #63c3d1;
   transition: 0.3s;
+  text-decoration: none;
 }
 section#footer .footer-list li a:hover {
-  color: #63c3d1;
+  color: #fff;
 }
 section#footer .footer-list.no-after::after {
   display: none;

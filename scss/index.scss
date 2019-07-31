@@ -278,10 +278,11 @@ section#footer {
       line-height:28px;
 
       a {
-        color:$secondary-active;
+        color: $primary;
         transition:.3s;
+        text-decoration: none;
         &:hover {
-          color:$primary;
+          color:#fff;
         }
       }
     }
