@@ -97,7 +97,7 @@ section.container-fluid {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 #top {
