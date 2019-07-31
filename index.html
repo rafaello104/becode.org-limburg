@@ -12,22 +12,26 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/plugins/all.min.css">
     <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/flipclock.css">
 
     <!-- Scripts -->
     <script src="./js/index.js" defer></script>
+
 </head>
 <body>
 
 <!-- Banner / Header for the website -->
 <section class="container-fluid section-full" id="top">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container overlay-content">
         <div class="row">
             <div class="col-12">
                 <h1>Welcome to BeCode Limburg!</h1>
                 <div id="countdown">
                     <div class="timer">
                         <h2>Join us !</h2>
+
+<!--                        <div class="clock"></div>-->
                         <p id="startTimeBlock">Calculating...</p>
                         <a class="btn btn-outline-primary hashlink" href="#info">Click to learn more</a>
                     </div>
@@ -220,32 +224,77 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid" id="sponsor-rows-holder">
-        <div class="row sponsor-row">
-            <img src="./images/sponsors/vdab.png" alt="Sponsor logo - VDAB" title="Sponsor logo for the company: VDAB" class="sponsor-image">
-            <img src="./images/sponsors/esf.png" alt="Sponsor logo - ESF" title="Sponsor logo for the company: ESF" class="sponsor-image">
-            <img src="./images/sponsors/telenet.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/close_the_gap.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/van_olmen_wynant.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/simplon.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/digital_belgium_skills_fund.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/degroof_petercam_foundation.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/orange.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/4_wings_foundation.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
+    <div class="container sponsor-container">
+        <div id="sponsor-row">
+            <img
+                    src="./images/sponsors/vdab.png"
+                    alt="Sponsor logo - VDAB"
+                    title="Sponsor logo for the company: VDAB"
+                    class="sponsor-image"
+            />
 
-        </div>
+            <img
+                    src="./images/sponsors/esf.png"
+                    alt="Sponsor logo - ESF"
+                    title="Sponsor logo for the company: ESF"
+                    class="sponsor-image"
+            />
 
-        <div class="row sponsor-row sponsor-row-2">
-            <img src="./images/sponsors/vdab.png" alt="Sponsor logo - VDAB" title="Sponsor logo for the company: VDAB" class="sponsor-image">
-            <img src="./images/sponsors/esf.png" alt="Sponsor logo - ESF" title="Sponsor logo for the company: ESF" class="sponsor-image">
-            <img src="./images/sponsors/telenet.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/close_the_gap.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/van_olmen_wynant.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/simplon.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/digital_belgium_skills_fund.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/degroof_petercam_foundation.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/orange.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
-            <img src="./images/sponsors/4_wings_foundation.png" alt="Sponsor logo - CLOSETHEGAP" title="Sponsor logo for the company: CLOSETHEGAP" class="sponsor-image">
+            <img
+                    src="./images/sponsors/telenet.png"
+                    alt="Sponsor logo - Telenet"
+                    title="Sponsor logo for the company: Telenet"
+                    class="sponsor-image"
+            />
+
+            <img
+                    src="./images/sponsors/close_the_gap.png"
+                    alt="Sponsor logo - Close The Gap"
+                    title="Sponsor logo for the company: Close The Gap"
+                    class="sponsor-image"
+            />
+
+            <img
+                    src="./images/sponsors/van_olmen_wynant.png"
+                    alt="Sponsor logo - Van Olmen & Wynant"
+                    title="Sponsor logo for the company: Van Olmen & Wynant"
+                    class="sponsor-image"
+            />
+
+            <img
+                    src="./images/sponsors/simplon.png"
+                    alt="Sponsor logo - Simplon"
+                    title="Sponsor logo for the company: Simplon"
+                    class="sponsor-image"
+            />
+
+            <img
+                    src="./images/sponsors/digital_belgium_skills_fund.png"
+                    alt="Sponsor logo - Digital Belgium Skills Fund"
+                    title="Sponsor logo for the company: Digital Belgium Skills Fund"
+                    class="sponsor-image"
+            />
+
+            <img
+                    src="./images/sponsors/degroof_petercam_foundation.png"
+                    alt="Sponsor logo - Degroof Petercam Foundation"
+                    title="Sponsor logo for the company: Degroof Petercam Foundation"
+                    class="sponsor-image"
+            />
+
+            <img
+                    src="./images/sponsors/orange.png"
+                    alt="Sponsor logo - Orange"
+                    title="Sponsor logo for the company: Orange"
+                    class="sponsor-image"
+            />
+
+            <img
+                    src="./images/sponsors/4_wings_foundation.png"
+                    alt="Sponsor logo - 4 Wings Foundation"
+                    title="Sponsor logo for the company: 4 Wings Foundation"
+                    class="sponsor-image"
+            />
 
         </div>
     </div>

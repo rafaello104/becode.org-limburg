@@ -1,0 +1,483 @@
+/* Get the bourbon mixin from http://bourbon.io */
+/* Reset */
+.flip-clock-wrapper * {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  -o-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  -webkit-backface-visibility: hidden !important;
+  -moz-backface-visibility: hidden !important;
+  -ms-backface-visibility: hidden !important;
+  -o-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+}
+
+.flip-clock-wrapper a {
+  cursor: pointer !important;
+  text-decoration: none !important;
+  color: #ccc !important;
+}
+
+.flip-clock-wrapper a:hover {
+  color: #fff !important;
+}
+
+.flip-clock-wrapper ul {
+  list-style: none !important;
+}
+
+.flip-clock-wrapper.clearfix:before,
+.flip-clock-wrapper.clearfix:after {
+  content: " " !important;
+  display: table !important;
+}
+
+.flip-clock-wrapper.clearfix:after {
+  clear: both !important;
+}
+
+.flip-clock-wrapper.clearfix {
+  *zoom: 1 !important;
+}
+
+/* Main */
+.flip-clock-wrapper {
+  font: normal 11px "Helvetica Neue", Helvetica, sans-serif !important;
+  -webkit-user-select: none !important;
+}
+
+.flip-clock-meridium {
+  background: none !important;
+  box-shadow: 0 0 0 !important;
+  font-size: 36px !important;
+}
+
+.flip-clock-meridium a {
+  color: #313333 !important;
+}
+
+.flip-clock-wrapper {
+  text-align: center !important;
+  position: relative !important;
+  width: 100% !important;
+  margin: 1em !important;
+}
+
+.flip-clock-wrapper:before,
+.flip-clock-wrapper:after {
+  content: " " !important;
+  /* 1 */
+  display: table !important;
+  /* 2 */
+}
+
+.flip-clock-wrapper:after {
+  clear: both !important;
+}
+
+/* Skeleton */
+.flip-clock-wrapper ul {
+  position: relative !important;
+  float: left !important;
+  margin: 5px !important;
+  width: 60px !important;
+  height: 90px !important;
+  font-size: 80px !important;
+  font-weight: bold !important;
+  line-height: 87px !important;
+  border-radius: 6px !important;
+  background: #000 !important;
+}
+
+.flip-clock-wrapper ul li {
+  z-index: 1 !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  line-height: 87px !important;
+  text-decoration: none !important;
+}
+
+.flip-clock-wrapper ul li:first-child {
+  z-index: 2 !important;
+}
+
+.flip-clock-wrapper ul li a {
+  display: block !important;
+  height: 100% !important;
+  -webkit-perspective: 200px !important;
+  -moz-perspective: 200px !important;
+  perspective: 200px !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  cursor: default !important;
+}
+
+.flip-clock-wrapper ul li a div {
+  z-index: 1 !important;
+  position: absolute !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 50% !important;
+  font-size: 80px !important;
+  overflow: hidden !important;
+  outline: 1px solid transparent !important;
+}
+
+.flip-clock-wrapper ul li a div .shadow {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 2 !important;
+}
+
+.flip-clock-wrapper ul li a div.up {
+  -webkit-transform-origin: 50% 100% !important;
+  -moz-transform-origin: 50% 100% !important;
+  -ms-transform-origin: 50% 100% !important;
+  -o-transform-origin: 50% 100% !important;
+  transform-origin: 50% 100% !important;
+  top: 0 !important;
+}
+
+.flip-clock-wrapper ul li a div.up:after {
+  content: "" !important;
+  position: absolute !important;
+  top: 44px !important;
+  left: 0 !important;
+  z-index: 5 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background-color: #000 !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.flip-clock-wrapper ul li a div.down {
+  -webkit-transform-origin: 50% 0 !important;
+  -moz-transform-origin: 50% 0 !important;
+  -ms-transform-origin: 50% 0 !important;
+  -o-transform-origin: 50% 0 !important;
+  transform-origin: 50% 0 !important;
+  bottom: 0 !important;
+  border-bottom-left-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+  position: absolute !important;
+  left: 0 !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  height: 200% !important;
+  color: #ccc !important;
+  text-shadow: 0 1px 2px #000 !important;
+  text-align: center !important;
+  background-color: #333 !important;
+  border-radius: 6px !important;
+  font-size: 70px !important;
+}
+
+.flip-clock-wrapper ul li a div.up div.inn {
+  top: 0 !important;
+}
+
+.flip-clock-wrapper ul li a div.down div.inn {
+  bottom: 0 !important;
+}
+
+/* PLAY */
+.flip-clock-wrapper ul.play li.flip-clock-before {
+  z-index: 3 !important;
+}
+
+.flip-clock-wrapper .flip {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7) !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active {
+  -webkit-animation: asd 0.01s 0.49s linear both !important;
+  -moz-animation: asd 0.01s 0.49s linear both !important;
+  animation: asd 0.01s 0.49s linear both !important;
+  z-index: 5 !important;
+}
+
+.flip-clock-divider {
+  float: left !important;
+  display: inline-block !important;
+  position: relative !important;
+  width: 20px !important;
+  height: 100px !important;
+}
+
+.flip-clock-divider:first-child {
+  width: 0 !important;
+}
+
+.flip-clock-dot {
+  display: block !important;
+  background: #323434 !important;
+  width: 10px !important;
+  height: 10px !important;
+  position: absolute !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
+  left: 5px !important;
+}
+
+.flip-clock-divider .flip-clock-label {
+  position: absolute !important;
+  top: -1.5em !important;
+  right: -86px !important;
+  color: black !important;
+  text-shadow: none !important;
+}
+
+.flip-clock-divider.minutes .flip-clock-label {
+  right: -88px !important;
+}
+
+.flip-clock-divider.seconds .flip-clock-label {
+  right: -91px !important;
+}
+
+.flip-clock-dot.top {
+  top: 30px !important;
+}
+
+.flip-clock-dot.bottom {
+  bottom: 30px !important;
+}
+
+@-webkit-keyframes asd {
+  0% {
+    z-index: 2 !important;
+  }
+  100% {
+    z-index: 4 !important;
+  }
+}
+@-moz-keyframes asd {
+  0% {
+    z-index: 2 !important;
+  }
+  100% {
+    z-index: 4 !important;
+  }
+}
+@-o-keyframes asd {
+  0% {
+    z-index: 2 !important;
+  }
+  100% {
+    z-index: 4 !important;
+  }
+}
+@keyframes asd {
+  0% {
+    z-index: 2 !important;
+  }
+  100% {
+    z-index: 4 !important;
+  }
+}
+.flip-clock-wrapper ul.play li.flip-clock-active .down {
+  z-index: 2 !important;
+  -webkit-animation: turn 0.5s 0.5s linear both !important;
+  -moz-animation: turn 0.5s 0.5s linear both !important;
+  animation: turn 0.5s 0.5s linear both !important;
+}
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotateX(90deg) !important;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) !important;
+  }
+}
+@-moz-keyframes turn {
+  0% {
+    -moz-transform: rotateX(90deg) !important;
+  }
+  100% {
+    -moz-transform: rotateX(0deg) !important;
+  }
+}
+@-o-keyframes turn {
+  0% {
+    -o-transform: rotateX(90deg) !important;
+  }
+  100% {
+    -o-transform: rotateX(0deg) !important;
+  }
+}
+@keyframes turn {
+  0% {
+    transform: rotateX(90deg) !important;
+  }
+  100% {
+    transform: rotateX(0deg) !important;
+  }
+}
+.flip-clock-wrapper ul.play li.flip-clock-before .up {
+  z-index: 2 !important;
+  -webkit-animation: turn2 0.5s linear both !important;
+  -moz-animation: turn2 0.5s linear both !important;
+  animation: turn2 0.5s linear both !important;
+}
+
+@-webkit-keyframes turn2 {
+  0% {
+    -webkit-transform: rotateX(0deg) !important;
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg) !important;
+  }
+}
+@-moz-keyframes turn2 {
+  0% {
+    -moz-transform: rotateX(0deg) !important;
+  }
+  100% {
+    -moz-transform: rotateX(-90deg) !important;
+  }
+}
+@-o-keyframes turn2 {
+  0% {
+    -o-transform: rotateX(0deg) !important;
+  }
+  100% {
+    -o-transform: rotateX(-90deg) !important;
+  }
+}
+@keyframes turn2 {
+  0% {
+    transform: rotateX(0deg) !important;
+  }
+  100% {
+    transform: rotateX(-90deg) !important;
+  }
+}
+.flip-clock-wrapper ul li.flip-clock-active {
+  z-index: 3 !important;
+}
+
+/* SHADOW */
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black)) !important;
+  background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100% !important;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%) !important;
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%) !important;
+  background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100% !important;
+  -webkit-animation: show 0.5s linear both !important;
+  -moz-animation: show 0.5s linear both !important;
+  animation: show 0.5s linear both !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black)) !important;
+  background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100% !important;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%) !important;
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%) !important;
+  background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100% !important;
+  -webkit-animation: hide 0.5s 0.3s linear both !important;
+  -moz-animation: hide 0.5s 0.3s linear both !important;
+  animation: hide 0.5s 0.3s linear both !important;
+}
+
+/*DOWN*/
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1))) !important;
+  background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100% !important;
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+  background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100% !important;
+  -webkit-animation: show 0.5s linear both !important;
+  -moz-animation: show 0.5s linear both !important;
+  animation: show 0.5s linear both !important;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1))) !important;
+  background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100% !important;
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+  background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100% !important;
+  -webkit-animation: hide 0.5s 0.3s linear both !important;
+  -moz-animation: hide 0.5s 0.3s linear both !important;
+  animation: hide 0.5s 0.2s linear both !important;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0 !important;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+@-moz-keyframes show {
+  0% {
+    opacity: 0 !important;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+@-o-keyframes show {
+  0% {
+    opacity: 0 !important;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0 !important;
+  }
+  100% {
+    opacity: 1 !important;
+  }
+}
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1 !important;
+  }
+  100% {
+    opacity: 0 !important;
+  }
+}
+@-moz-keyframes hide {
+  0% {
+    opacity: 1 !important;
+  }
+  100% {
+    opacity: 0 !important;
+  }
+}
+@-o-keyframes hide {
+  0% {
+    opacity: 1 !important;
+  }
+  100% {
+    opacity: 0 !important;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1 !important;
+  }
+  100% {
+    opacity: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=flipclock.css.map */

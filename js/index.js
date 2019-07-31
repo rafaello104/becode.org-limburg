@@ -109,25 +109,31 @@ function animateIcon() {
 
 
 
+// JS to auto scroll the company logo's in the sponsors section
+// ============================================================
+var px = 1,
+    iterations = 1;
+function scroller () {
+
+    var gallery = document.querySelector("#sponsor-row"),
+        logos = document.querySelectorAll("#sponsor-row img");
 
 
+    // Method 1: Reset margin, move icons
+    // ==================================
+    gallery.classList.toggle("transitioning");
+    // gallery.style.transition = "5s";
+    // gallery.style.marginLeft = "-200px";
 
+    iterations++;
+    window.setTimeout(function() {
+        gallery.appendChild(logos[0]);
+        gallery.classList.toggle("transitioning");
+        window.setTimeout(scroller, 10);
+    }, 5001);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+scroller();
 
 
 
