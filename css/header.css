@@ -69,6 +69,16 @@
   height: 54px;
   width: 100%;
 }
+#header .menu .brand-image {
+  padding-left: 12px;
+  height: 38px;
+  margin-top: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+#header .menu .brand-image img {
+  height: 54px;
+}
 #header .menu ul {
   width: 50%;
   float: right;
