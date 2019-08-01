@@ -3,17 +3,105 @@
 #header {
     background: url("../assets/images/banner/banner-main.jpg") center 70%/cover;
     height: 100vh;
-
     position: relative;
-}
 
-.overlay {
-    position: absolute;
-    background: $mask;
-    width: 100%;
-    height: 100%;
-}
+    .video-container {
+        position: absolute;
+        left:0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
-.overlay-content {
-    z-index: 10;
+    .video-container video {
+        min-width: 100%;
+        min-height: 100%;
+        max-height:110vh;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index:2;
+    }
+
+
+
+
+    .overlay {
+      position: absolute;
+      background: $mask;
+      width: 100%;
+      height: 30%;
+      left:0;
+      bottom:0;
+      z-index:3;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .overlay-content {
+      z-index: 4;
+      color:#fff;
+    }
+
+    .menu {
+        background-color:$mask;
+        position:absolute;
+        z-index:4;
+        left:0;
+        top:0;
+        height:54px;
+        width:100%;
+
+        ul {
+            width:50%;
+            float:right;
+            list-style: none;
+            padding:0;
+            padding-right:12px;
+            display:flex;
+            justify-content: flex-end;
+
+            li {
+                height:54px;
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                box-sizing:border-box;
+                cursor:pointer;
+                padding:0 12px;
+                border-radius:999px;
+
+
+              a {
+                color:#999;
+                display:block;
+                text-decoration:none;
+                transition:.3s;
+              }
+
+
+
+              &:hover {
+
+                a {
+                  color:#fff;
+                }
+              }
+            }
+
+          li.btn {
+            height:38px;
+            margin-top:8px;
+            a {
+              color:#fff;
+            }
+          }
+        }
+    }
 }
