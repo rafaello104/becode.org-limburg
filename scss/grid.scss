@@ -27,6 +27,15 @@
     margin: map-get($default-map, col-margin) 0px;
 }
 
+.equalize-cols {
+    [class*="col-"]:first-child {
+        padding-left: 0px;
+    }
+    [class*="col-"]:last-child {
+        padding-right: 0px;
+    }
+}
+
 @for $i from 1 through $columns {
     .col#{map-get($default-map, affix)}-#{$i} {
         flex-basis: (100% * $i / $columns);
@@ -43,6 +52,14 @@
             [class*="col-"] {
                 padding: 0px map-get($map, col-padding);
                 margin: map-get($map, col-margin) 0px;
+            }
+            .equalize-cols#{map-get($map, affix)} {
+                [class*="col-"]:first-child {
+                    padding-left: 0px;
+                }
+                [class*="col-"]:last-child {
+                    padding-right: 0px;
+                }
             }
             @for $i from 1 through $columns {
                 .col#{map-get($map, affix)}-#{$i} {
