@@ -42,7 +42,14 @@
 [class*=col-] {
   box-sizing: border-box;
   padding: 0px 15px;
-  margin: 5px 0px;
+  margin: 0px 0px;
+}
+
+.equalize-cols [class*=col-]:first-child {
+  padding-left: 0px;
+}
+.equalize-cols [class*=col-]:last-child {
+  padding-right: 0px;
 }
 
 .col-1 {
@@ -101,7 +108,14 @@
 
   [class*=col-] {
     padding: 0px 15px;
-    margin: 5px 0px;
+    margin: 0px 0px;
+  }
+
+  .equalize-cols-sm [class*=col-]:first-child {
+    padding-left: 0px;
+  }
+  .equalize-cols-sm [class*=col-]:last-child {
+    padding-right: 0px;
   }
 
   .col-sm-1 {
@@ -159,7 +173,14 @@
 
   [class*=col-] {
     padding: 0px 15px;
-    margin: 5px 0px;
+    margin: 0px 0px;
+  }
+
+  .equalize-cols-md [class*=col-]:first-child {
+    padding-left: 0px;
+  }
+  .equalize-cols-md [class*=col-]:last-child {
+    padding-right: 0px;
   }
 
   .col-md-1 {
@@ -217,7 +238,14 @@
 
   [class*=col-] {
     padding: 0px 15px;
-    margin: 5px 0px;
+    margin: 0px 0px;
+  }
+
+  .equalize-cols-lg [class*=col-]:first-child {
+    padding-left: 0px;
+  }
+  .equalize-cols-lg [class*=col-]:last-child {
+    padding-right: 0px;
   }
 
   .col-lg-1 {
@@ -275,7 +303,14 @@
 
   [class*=col-] {
     padding: 0px 15px;
-    margin: 5px 0px;
+    margin: 0px 0px;
+  }
+
+  .equalize-cols-xl [class*=col-]:first-child {
+    padding-left: 0px;
+  }
+  .equalize-cols-xl [class*=col-]:last-child {
+    padding-right: 0px;
   }
 
   .col-xl-1 {

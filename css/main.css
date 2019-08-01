@@ -67,9 +67,12 @@
   color: #35a3b3;
 }
 
-section.container-fluid {
+.container-fluid[class*=section-] {
   padding: 48px 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-full {
@@ -92,11 +95,8 @@ section.container-fluid {
   font-family: Montserrat;
 }
 
-.mb {
+.my {
   margin-bottom: 20px;
-}
-
-.mt {
   margin-top: 20px;
 }
 
@@ -160,7 +160,7 @@ section.container-fluid {
 #info {
   background-color: #fafafa;
 }
-#info #registrationTimeBlock {
+#info #registrationTimer {
   display: block;
   padding: 32px 0;
   color: #555;
@@ -170,6 +170,17 @@ section.container-fluid {
   border-bottom: 1px solid #f0f0f0;
 }
 
+.info-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 992px) {
+  .info-buttons li {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 #sponsors {
   background-color: #fafafa;
 }

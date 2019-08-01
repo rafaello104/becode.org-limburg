@@ -9,7 +9,7 @@ $default-map: (
     breakpoint:         0px,
     container-w:        auto,
     col-padding:        $standard-unit * 3,
-    col-margin:         $standard-unit
+    col-margin:         0px
 );
 
 $sm-map: (
@@ -18,7 +18,7 @@ $sm-map: (
     breakpoint:         576px,
     container-w:        546px,
     col-padding:        $standard-unit * 3,
-    col-margin:         $standard-unit
+    col-margin:         0px
 );
 
 $md-map: (
@@ -27,7 +27,7 @@ $md-map: (
     breakpoint:         768px,
     container-w:        728px,
     col-padding:        $standard-unit * 3,
-    col-margin:         $standard-unit
+    col-margin:         0px
 );
 
 $lg-map: (
@@ -36,7 +36,7 @@ $lg-map: (
     breakpoint:         992px,
     container-w:        942px,
     col-padding:        $standard-unit * 3,
-    col-margin:         $standard-unit
+    col-margin:         0px
 );
 
 $xl-map: (
@@ -45,7 +45,7 @@ $xl-map: (
     breakpoint:         1200px,
     container-w:        1140px,
     col-padding:        $standard-unit * 3,
-    col-margin:         $standard-unit
+    col-margin:         0px
 );
 
 $breakpoint-map: (

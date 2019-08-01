@@ -13,6 +13,8 @@
 }
 
 // === Define button styles ===
+
+
 .btn {
   transition:.3s;
   padding:12px 24px;
@@ -51,9 +53,12 @@
 }
 
 // === Section styles ===
-section.container-fluid {
+.container-fluid[class*="section-"] {
   padding: 48px 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-full {
@@ -78,11 +83,8 @@ section.container-fluid {
 }
 
 // === Add margin classes ===
-.mb {
+.my {
   margin-bottom:20px;
-}
-
-.mt {
   margin-top:20px;
 }
 
@@ -168,7 +170,7 @@ section.container-fluid {
 #info {
   background-color:#fafafa;
 
-  #registrationTimeBlock {
+  #registrationTimer {
     display:block;
     padding:32px 0;
     color:#555;
@@ -179,6 +181,17 @@ section.container-fluid {
   }
 }
 
+.info-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: map-get($lg-map, breakpoint)){
+  .info-buttons li {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 
 // === Sponsors styles ===
 #sponsors {
