@@ -1,31 +1,23 @@
 @font-face {
-  font-family: BeCode;
-  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
 }
 @font-face {
-  font-family: TitleLight;
-  src: url("../fonts/Lato/Lato-Thin.ttf");
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Thin.ttf");
 }
 @font-face {
-  font-family: TitleSpecial;
-  src: url("../fonts/Raleway/Raleway-Regular.ttf");
+  font-family: Raleway;
+  src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
 }
-/* SCSS */
-.profile-card [class*=p-c-quote-] {
-  margin: 15px 0px;
+@font-face {
+  font-family: Trueno;
+  src: url("../assets/fonts/Trueno/truenorg.otf");
 }
-
-/* CSS */
-.row {
-  justify-content: center;
-  margin: 0px;
+@font-face {
+  font-family: Trueno-Outline;
+  src: url("../assets/fonts/Trueno/truenobdol.otf");
 }
-
-.container-title, .row-title {
-  font-family: TitleSpecial;
-  text-align: center;
-}
-
 [class*=-card] {
   box-sizing: border-box;
 }
@@ -33,13 +25,15 @@
 .profile-card {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
   height: 100%;
+  max-width: 350px;
   margin: auto;
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
   background-color: #16232e;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  font-family: Raleway;
+  text-align: center;
 }
-.profile-card .p-c-img, .profile-card #mystery-coach {
+.profile-card img, .profile-card #mystery-coach {
   width: 100%;
 }
 .profile-card #mystery-coach {
@@ -47,7 +41,7 @@
   overflow: hidden;
 }
 .profile-card #mystery-coach > div {
-  background: url("../images/mystery-coach.jpeg") round;
+  background: url("../assets/images/staff/mystery-coach.jpeg") round;
   padding-bottom: 100%;
   filter: blur(10px);
 }
@@ -60,82 +54,77 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.profile-card .p-c-titles {
-  text-align: center;
-  padding: 15px 0px;
-  border-top: 5px solid #35a3b3;
-}
-.profile-card .p-c-titles * {
-  margin: 10px 0px;
-}
-.profile-card .p-c-name {
-  font-family: BeCode;
+.profile-card .name {
+  border-top: 4px solid #35a3b3;
+  padding-top: 15px;
   font-size: 1.5rem;
   color: #35a3b3;
 }
-.profile-card .p-c-title {
-  font-family: BeCode;
+.profile-card .title {
   font-size: 0.8rem;
-  color: #487296;
+  color: #FFF;
 }
-.profile-card .p-c-title::before {
+.profile-card .title::before {
   content: "</ ";
 }
-.profile-card .p-c-title::after {
+.profile-card .title::after {
   content: " >";
 }
-.profile-card [class*=p-c-quote-] {
+.profile-card [class*=quote-] {
   box-sizing: border-box;
   width: 100%;
-  padding: 0px 30px;
-  font-family: BeCode;
-  color: #487296;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #FFF;
 }
-.profile-card .p-c-quote-content {
-  text-align: justify;
+.profile-card .quote-content {
+  padding-top: 25px;
   margin-bottom: auto;
+  text-align: justify;
   font-size: 0.9rem;
 }
-.profile-card .p-c-quote-content::before, .profile-card .p-c-quote-content::after {
+.profile-card .quote-content::before, .profile-card .quote-content::after {
   content: '"';
 }
-.profile-card .p-c-quote-author {
+.profile-card .quote-author {
+  padding-bottom: 25px;
+  padding-top: 25px;
   text-align: right;
   font-style: italic;
   font-size: 0.7rem;
 }
-.profile-card .p-c-quote-author::before {
+.profile-card .quote-author::before {
   content: "-";
 }
-.profile-card .p-c-links {
+.profile-card .links {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 5px 0px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.profile-card .p-c-links a {
+.profile-card .links a {
   color: #487296;
   font-size: 1.5rem;
   transition: color 0.5s;
 }
-.profile-card .p-c-links a * {
+.profile-card .links a * {
   padding: 5px 10px;
 }
-.profile-card .p-c-links .linkedin:hover {
+.profile-card .links .linkedin:hover {
   color: #0077b5;
 }
-.profile-card .p-c-links .youtube:hover {
+.profile-card .links .youtube:hover {
   color: #ef4921;
 }
-.profile-card .p-c-links .github:hover {
-  color: #000000;
+.profile-card .links .github:hover {
+  color: #fff;
 }
-.profile-card .p-c-links .stackoverflow:hover {
+.profile-card .links .stackoverflow:hover {
   color: #f48024;
 }
-.profile-card .p-c-links .gmail:hover {
-  color: #FFFFFF;
+.profile-card .links .gmail:hover {
+  color: #fff;
 }
 
 .iframe-wrapper {
@@ -154,16 +143,6 @@
 
 .display {
   display: flex;
-}
-
-#selene {
-  transform: rotateZ(90deg);
-}
-
-@media screen and (min-width: 768px) {
-  #team > .container > .row {
-    margin-bottom: 48px !important;
-  }
 }
 
 /*# sourceMappingURL=cards.css.map */
