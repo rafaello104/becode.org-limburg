@@ -3,7 +3,7 @@
 /* === Standard grid classes === */
 .container {
     width: map-get($default-map, container-w);
-    margin: auto; 
+    margin: 0px auto; 
     display: flex; 
     flex-direction: column;
 }
@@ -17,7 +17,8 @@
 .row {
     display: flex; 
     flex-wrap: wrap;
-    margin: $row-margin 0px;
+    justify-content: center;
+    margin: 0px;
 }
 
 [class*="col-"] {

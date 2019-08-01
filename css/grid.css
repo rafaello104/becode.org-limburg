@@ -1,19 +1,27 @@
 @font-face {
-  font-family: BeCode;
-  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
 }
 @font-face {
-  font-family: TitleLight;
-  src: url("../fonts/Lato/Lato-Thin.ttf");
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Thin.ttf");
 }
 @font-face {
-  font-family: TitleSpecial;
-  src: url("../fonts/Raleway/Raleway-Regular.ttf");
+  font-family: Raleway;
+  src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: Trueno;
+  src: url("../assets/fonts/Trueno/truenorg.otf");
+}
+@font-face {
+  font-family: Trueno-Outline;
+  src: url("../assets/fonts/Trueno/truenobdol.otf");
 }
 /* === Standard grid classes === */
 .container {
   width: auto;
-  margin: auto;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
 }
@@ -27,7 +35,8 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 15px 0px;
+  justify-content: center;
+  margin: 0px;
 }
 
 [class*=col-] {

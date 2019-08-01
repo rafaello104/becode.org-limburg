@@ -1,32 +1,5 @@
 @import "variables";
 
-/* SCSS */
-
-%card-element-spacing {
-    margin: 15px 0px;
-}
-
-%underline {
-    padding-bottom: 5px;
-    border-bottom: 2px solid $primary-active;
-}
-
-
-
-
-/* CSS */
-
-.row {
-    justify-content: center;
-    margin: 0px;
-}
-
-.container-title, .row-title {
-    font-family: TitleSpecial;
-    text-align: center;
-}
-
-
 [class*="-card"] {
     box-sizing: border-box;
 }
@@ -34,13 +7,18 @@
 .profile-card {
     display: flex;
     flex-direction: column;
-    max-width: 350px;
-    height: 100%;
-    margin: auto;
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
-    background-color: $secondary;
     
-    .p-c-img, #mystery-coach {
+    height: 100%;
+    max-width: 350px;
+    margin: auto;
+    
+    background-color: $secondary;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+    
+    font-family: Raleway;
+    text-align: center;
+    
+    img, #mystery-coach {
         width: 100%;
     }
 
@@ -49,7 +27,7 @@
         overflow: hidden;
         
         &>div {
-            background: url("../images/mystery-coach.jpeg") round;
+            background: url("../assets/images/staff/mystery-coach.jpeg") round;
             padding-bottom: 100%;
             filter: blur(10px);
         }
@@ -64,25 +42,16 @@
         }
     }
 
-    .p-c-titles {
-        text-align: center;
-        padding: 15px 0px;
-        border-top: 5px solid $primary-active;
-        * {
-            margin: 10px 0px;
-        }
-    }
-
-    .p-c-name {
-        font-family: BeCode;
+    .name {
+        border-top: 4px solid $primary-active;
+        padding-top: 15px;
         font-size: 1.5rem;
         color: $primary-active;
     }
 
-    .p-c-title {
-        font-family: BeCode;
+    .title {
         font-size: 0.8rem;
-        color: $secondary-active;
+        color: #FFF;
         &::before {
             content:"</ ";
         }
@@ -91,34 +60,37 @@
         }
     }
     
-    [class*="p-c-quote-"] {
+    [class*="quote-"] {
         box-sizing: border-box;
         width: 100%;
-        padding: 0px 30px;
-        font-family: BeCode;
-        color: $secondary-active;
-        @extend %card-element-spacing
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #FFF;
     }
     
-    .p-c-quote-content { 
-        text-align: justify;
+    .quote-content { 
+        padding-top: 25px;
         margin-bottom: auto;
+        text-align: justify;
         font-size: 0.9rem;
         &::before, &::after {
             content:'"';
         }
     }
 
-    .p-c-quote-author {
+    .quote-author {
+        padding-bottom: 25px;
+        padding-top: 25px;
         text-align: right;
         font-style: italic;
         font-size: 0.7rem;
+
         &::before {
             content:'-';
         }
     }
 
-    .p-c-links {
+    .links {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -166,14 +138,4 @@
 
 .display {
     display: flex;
-}
-
-#selene {
-    transform: rotateZ(90deg);
-}
-
-@media screen and (min-width: 768px) {
-    #team > .container > .row {
-        margin-bottom:48px !important;
-    }
 }

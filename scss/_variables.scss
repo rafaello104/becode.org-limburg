@@ -57,23 +57,32 @@ $breakpoint-map: (
 
 // === Used Font Families ===
 @font-face {
-    font-family: BeCode;
-    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+    font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf');
 }
 
 @font-face {
-    font-family: TitleLight;
-    src: url('../fonts/Lato/Lato-Thin.ttf');
+    font-family: Lato;
+    src: url('../assets/fonts/Lato/Lato-Thin.ttf');
 }
 
 
 @font-face {
-    font-family: TitleSpecial;
-    src: url('../fonts/Raleway/Raleway-Regular.ttf');
+    font-family: Raleway;
+    src: url('../assets/fonts/Raleway/Raleway-Regular.ttf');
 }
 
+@font-face {
+    font-family: Trueno;
+    src: url('../assets/fonts/Trueno/truenorg.otf');
+}
 
-// === Color variables ===
+@font-face {
+    font-family: Trueno-Outline;
+    src: url('../assets/fonts/Trueno/truenobdol.otf');
+}
+
+// === Colors ===
 $primary: #63c3d1;
 $primary-active: darken($primary, 15%);
 
@@ -82,6 +91,8 @@ $secondary-active: lighten($secondary, 30%);
 
 $youtube: #ef4921;
 $linkedin: #0077b5;
-$github: #000000;
+$github: #fff;
 $stackoverflow: #f48024;
-$gmail: #FFFFFF;
+$gmail: #fff;
+
+$mask: rgba(0, 0, 0, 0.5);
