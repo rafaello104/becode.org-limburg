@@ -79,7 +79,7 @@ function sendForm(e) {
         }
     });
 
-    request.open('POST', 'https://genk.becode.xyz/mail', true);
+    request.open('POST', 'https://genk.becode.xyz/mail/contact_form', true);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.send(postData);
 
@@ -89,9 +89,6 @@ function animateIcon() {
     submit.firstElementChild.classList.toggle("fa-spin");
     submit.firstElementChild.classList.toggle("fa-paper-plane");
     submit.firstElementChild.classList.toggle("fa-spinner");
-
-
-
 
     window.setTimeout(function() {
         submit.firstElementChild.classList.toggle("fa-spin");
@@ -114,22 +111,15 @@ function animateIcon() {
 var px = 1,
     iterations = 1;
 function scroller () {
-
     var gallery = document.querySelector("#sponsor-row"),
         logos = document.querySelectorAll("#sponsor-row img");
 
-
-    // Method 1: Reset margin, move icons
-    // ==================================
     gallery.classList.toggle("transitioning");
-    // gallery.style.transition = "5s";
-    // gallery.style.marginLeft = "-200px";
-
     iterations++;
     window.setTimeout(function() {
         gallery.appendChild(logos[0]);
         gallery.classList.toggle("transitioning");
-        window.setTimeout(scroller, 10);
+        window.setTimeout(scroller, 20);
     }, 5001);
 }
 
@@ -145,7 +135,6 @@ function addLeadingZero(item) {
     if (item < 10) {
         item = "0" + item;
     }
-
     return item;
 }
 
