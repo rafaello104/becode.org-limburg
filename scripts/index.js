@@ -16,8 +16,8 @@ function scrollToSection(e) {
 
 // Countdown clock functionality
 // =============================
-startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 25, 2019 17:00:00").getTime());
-startCountdown(document.querySelector("#startTimer"), new Date("Sep 3, 2019 09:00:00").getTime());
+startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 29, 2019 09:00:00").getTime());
+startCountdown(document.querySelector("#startTimer"), new Date("Sep 10, 2019 09:00:00").getTime());
 
 // Create a function for multi-countdowns on the page, ask for element to show countdown as well as the datetime to countdown to
 // =============================================================================================================================
