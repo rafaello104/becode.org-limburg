@@ -145,7 +145,7 @@
 
 /* Parallax Header */
 /* =============== */
-@media screen and (min-device-width: 768px) {
+@media only screen and (min-device-width: 768px) {
   div.content {
     max-height: 100%;
     overflow-x: hidden;
@@ -170,7 +170,7 @@
     height: 100%;
   }
 }
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   #header .overlay-content {
     top: 80px;
     height: calc(100% - 80px);
@@ -179,7 +179,7 @@
     margin-bottom: 48px;
   }
 }
-@media screen and (max-width: 776px) {
+@media only screen and (max-width: 776px) {
   #header .menu .brand-image {
     display: none;
   }

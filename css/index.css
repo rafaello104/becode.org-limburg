@@ -135,7 +135,7 @@ h2.title {
   font-weight: 800;
 }
 
-@media screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 768px) {
   h1 {
     font-size: 64px;
   }

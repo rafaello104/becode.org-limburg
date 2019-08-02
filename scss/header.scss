@@ -147,7 +147,7 @@
 
 /* Parallax Header */
 /* =============== */
-@media screen and (min-device-width: 768px) {
+@media only screen and (min-device-width: 768px) {
   $scroll-factor: .5;
 
   div.content {
@@ -175,7 +175,7 @@
 }
 
 
-@media screen and (max-width: map-get($lg-map, breakpoint)) {
+@media only screen and (max-width: map-get($lg-map, breakpoint)) {
   #header {
     .overlay-content {
       top:80px;
@@ -188,7 +188,7 @@
   }
 }
 
-@media screen and (max-width:776px) {
+@media only screen and (max-width:776px) {
   #header {
     .menu {
       .brand-image {
