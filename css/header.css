@@ -145,7 +145,7 @@
 
 /* Parallax Header */
 /* =============== */
-main {
+body {
   max-height: 100%;
   overflow-x: hidden;
   perspective: 1px;
@@ -165,7 +165,7 @@ section, .overlay-content {
   transform: translateZ(0);
 }
 
-html, body {
+html {
   height: 100%;
 }
 

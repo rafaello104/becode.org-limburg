@@ -1,5 +1,7 @@
 @import "variables";
 
+
+
 [class*="-card"] {
     box-sizing: border-box;
 }
@@ -33,7 +35,7 @@
         }
         &::after {
             content: "?";
-            color: #FFF;
+            color: #fff;
             font-size: 75px;
             position: absolute;
             top: 50%;  
@@ -50,6 +52,7 @@
     }
 
     .title {
+        padding-top: 5px;
         font-size: 0.8rem;
         color: #FFF;
         &::before {
@@ -71,6 +74,7 @@
     .quote-content { 
         padding-top: 25px;
         margin-bottom: auto;
+        min-height: 150px;
         text-align: justify;
         font-size: 0.9rem;
         &::before, &::after {
@@ -95,9 +99,9 @@
         justify-content: center;
         width: 100%;
         padding: 5px 0px;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.4);
         a {
-            color: $secondary-active;
+            color: $primary-active;
             font-size: 1.5rem;
             transition: color .5s;
             * {

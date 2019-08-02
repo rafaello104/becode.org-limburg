@@ -7,4 +7,12 @@ ul, ol {
   list-style: none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
+p {
+  text-align: justify;
+}
+
 /*# sourceMappingURL=reset.css.map */

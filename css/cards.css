@@ -47,7 +47,7 @@
 }
 .profile-card #mystery-coach::after {
   content: "?";
-  color: #FFF;
+  color: #fff;
   font-size: 75px;
   position: absolute;
   top: 50%;
@@ -61,6 +61,7 @@
   color: #35a3b3;
 }
 .profile-card .title {
+  padding-top: 5px;
   font-size: 0.8rem;
   color: #FFF;
 }
@@ -80,6 +81,7 @@
 .profile-card .quote-content {
   padding-top: 25px;
   margin-bottom: auto;
+  min-height: 150px;
   text-align: justify;
   font-size: 0.9rem;
 }
@@ -101,10 +103,10 @@
   justify-content: center;
   width: 100%;
   padding: 5px 0px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .profile-card .links a {
-  color: #487296;
+  color: #35a3b3;
   font-size: 1.5rem;
   transition: color 0.5s;
 }
