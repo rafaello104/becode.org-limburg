@@ -145,7 +145,7 @@
 
 /* Parallax Header */
 /* =============== */
-body {
+div.content {
   max-height: 100%;
   overflow-x: hidden;
   perspective: 1px;
@@ -153,7 +153,7 @@ body {
   transform-style: preserve-3d;
 }
 
-header {
+#header {
   position: relative;
   margin-left: -8px;
   vertical-align: top;
@@ -165,7 +165,7 @@ section, .overlay-content {
   transform: translateZ(0);
 }
 
-html {
+html, body {
   height: 100%;
 }
 

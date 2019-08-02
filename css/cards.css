@@ -18,6 +18,10 @@
   font-family: Trueno-Outline;
   src: url("../assets/fonts/Trueno/truenobdol.otf");
 }
+#team {
+  background-color: #fff;
+}
+
 [class*=-card] {
   box-sizing: border-box;
 }

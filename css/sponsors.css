@@ -1,0 +1,37 @@
+#sponsors {
+  background-color: #fff;
+}
+#sponsors #sponsor-row {
+  display: flex;
+  height: 150px;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+#sponsors .transitioning {
+  transition: 5s linear;
+  margin-left: -200px;
+}
+#sponsors .container {
+  overflow: hidden;
+}
+#sponsors .sponsor-container {
+  border: 15px solid #fff;
+  border-top: 0;
+  border-bottom: 0;
+  box-sizing: border-box;
+}
+#sponsors .sponsor-image {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 24px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+  opacity: 0.7;
+}
+#sponsors .sponsor-image:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=sponsors.css.map */

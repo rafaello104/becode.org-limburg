@@ -18,18 +18,26 @@
   font-family: Trueno-Outline;
   src: url("../assets/fonts/Trueno/truenobdol.otf");
 }
-.titleBeCode {
+@font-face {
   font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
 }
-
-.titleLight {
+@font-face {
   font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Thin.ttf");
 }
-
-.titleSpecial {
+@font-face {
   font-family: Raleway;
+  src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
 }
-
+@font-face {
+  font-family: Trueno;
+  src: url("../assets/fonts/Trueno/truenorg.otf");
+}
+@font-face {
+  font-family: Trueno-Outline;
+  src: url("../assets/fonts/Trueno/truenobdol.otf");
+}
 .btn {
   transition: 0.3s;
   padding: 12px 24px;
@@ -47,24 +55,24 @@
 
 .btn-outline-primary {
   background-color: transparent;
-  border-color: #63c3d1;
-  color: #63c3d1;
+  border-color: #35a3b3;
+  color: #35a3b3;
 }
 
 .btn-primary {
-  background-color: #63c3d1;
-  border-color: #63c3d1;
+  background-color: #35a3b3;
+  border-color: #35a3b3;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #35a3b3;
-  border-color: #35a3b3;
+  background-color: #63c3d1;
+  border-color: #63c3d1;
 }
 
 .btn-outline-primary:hover {
-  border-color: #35a3b3;
-  color: #35a3b3;
+  border-color: #63c3d1;
+  color: #63c3d1;
 }
 
 .container-fluid[class*=section-] {
@@ -141,59 +149,19 @@ h2.title {
   visibility: hidden;
 }
 
-#team {
-  background-color: #fff;
-}
+@media screen and (max-device-width: 768px) {
+  h1 {
+    font-size: 64px;
+  }
 
-#top {
-  height: 100vh;
-  width: 100%;
-  background-image: url("./../images/banner.jpg");
-  background-size: cover;
-  color: #fff;
-}
-#top .col-12 {
-  justify-content: center;
-}
-#top #countdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#top #countdown .timer {
-  margin-top: 48px;
-  text-align: center;
-}
-#top #countdown .timer a, #top #countdown .timer div {
-  margin: 24px 0;
-}
-#top #countdown .timer #startTimer {
-  font-size: 2em;
-}
-#top h1 {
-  font-size: 4em;
-  text-align: center;
-}
-#top .btn {
-  margin: auto;
-}
-#top .overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-#top .container {
-  position: relative;
-  z-index: 2;
-}
-#top .container .mtfix {
-  margin-top: 5px;
-}
+  h2 {
+    font-size: 50px;
+  }
 
+  h3 {
+    font-size: 42px;
+  }
+}
 #info {
   background-color: #fff;
 }
@@ -222,6 +190,159 @@ h2.title {
     padding-bottom: 80px;
   }
 }
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Thin.ttf");
+}
+@font-face {
+  font-family: Raleway;
+  src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: Trueno;
+  src: url("../assets/fonts/Trueno/truenorg.otf");
+}
+@font-face {
+  font-family: Trueno-Outline;
+  src: url("../assets/fonts/Trueno/truenobdol.otf");
+}
+#team {
+  background-color: #fff;
+}
+
+[class*=-card] {
+  box-sizing: border-box;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 350px;
+  margin: auto;
+  background-color: #16232e;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  font-family: Raleway;
+  text-align: center;
+}
+.profile-card img, .profile-card #mystery-coach {
+  width: 100%;
+}
+.profile-card #mystery-coach {
+  position: relative;
+  overflow: hidden;
+}
+.profile-card #mystery-coach > div {
+  background: url("../assets/images/staff/mystery-coach.jpeg") round;
+  padding-bottom: 100%;
+  filter: blur(10px);
+}
+.profile-card #mystery-coach::after {
+  content: "?";
+  color: #fff;
+  font-size: 75px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile-card .name {
+  border-top: 4px solid #35a3b3;
+  padding-top: 15px;
+  font-size: 1.5rem;
+  color: #35a3b3;
+}
+.profile-card .title {
+  padding-top: 5px;
+  font-size: 0.8rem;
+  color: #FFF;
+}
+.profile-card .title::before {
+  content: "</ ";
+}
+.profile-card .title::after {
+  content: " >";
+}
+.profile-card [class*=quote-] {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #FFF;
+}
+.profile-card .quote-content {
+  padding-top: 25px;
+  margin-bottom: auto;
+  min-height: 150px;
+  text-align: justify;
+  font-size: 0.9rem;
+}
+.profile-card .quote-content::before, .profile-card .quote-content::after {
+  content: '"';
+}
+.profile-card .quote-author {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  text-align: right;
+  font-style: italic;
+  font-size: 0.7rem;
+}
+.profile-card .quote-author::before {
+  content: "-";
+}
+.profile-card .links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.profile-card .links a {
+  color: #35a3b3;
+  font-size: 1.5rem;
+  transition: color 0.5s;
+}
+.profile-card .links a * {
+  padding: 5px 10px;
+}
+.profile-card .links .linkedin:hover {
+  color: #0077b5;
+}
+.profile-card .links .youtube:hover {
+  color: #ef4921;
+}
+.profile-card .links .github:hover {
+  color: #fff;
+}
+.profile-card .links .stackoverflow:hover {
+  color: #f48024;
+}
+.profile-card .links .gmail:hover {
+  color: #fff;
+}
+
+.iframe-wrapper {
+  position: relative;
+  display: none;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 100%;
+}
+
+.display {
+  display: flex;
+}
+
 #sponsors {
   background-color: #fff;
 }
@@ -341,19 +462,6 @@ h2.title {
 
   #info h2, #info h3, #team h2, #team h3, #sponsors h2, #sponsors h3 {
     text-align: center;
-  }
-}
-@media screen and (max-device-width: 768px) {
-  h1 {
-    font-size: 64px;
-  }
-
-  h2 {
-    font-size: 50px;
-  }
-
-  h3 {
-    font-size: 42px;
   }
 }
 

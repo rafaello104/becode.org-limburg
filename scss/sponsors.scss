@@ -1,0 +1,45 @@
+// === Sponsors styles ===
+#sponsors {
+  background-color:#fff;
+
+  #sponsor-row {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    overflow: hidden;
+
+  }
+
+  .transitioning {
+    transition:5s linear;
+    margin-left:-200px;
+  }
+
+  .container {
+    overflow:hidden;
+  }
+
+  .sponsor-container {
+    border: 15px solid #fff;
+    border-top:0;
+    border-bottom:0;
+    box-sizing:border-box;
+  }
+
+  .sponsor-image {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 24px;
+    filter: grayscale(100%);
+    transition: .3s;
+    //cursor: pointer;
+    opacity: .7;
+
+    &:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+}

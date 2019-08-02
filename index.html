@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta data -->
     <title>BeCode | Limburg</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Rafael Lambelin, Selene Nijst">
     <meta name="description" content="BeCode Limburg division's webpage. We list the start of new groups, any news and all contact information.">
+    <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
 
-    <!-- Stylesheets -->
+    <!-- Framework stylesheets -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Plugin stylesheets -->
     <link rel="stylesheet" href="./css/plugins/font-awesome/all.min.css">
+
+    <!-- Personal stylesheet loader -->
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/header.css">
 
@@ -20,17 +26,9 @@
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-
+<div class="content">
     <!-- Section: Header. -->
     <header class="container-fluid section-full after-none" id="header">
-
-        <!-- Only use the code below if we want to use the video -->
-        <!--
-        <div class="video-container">
-            <video src="./assets/videos/banner-video6-720p.mp4" autoplay loop></video>
-        </div>
-        -->
-    
         <div class="menu">
             <a href="https://becode.org" class="brand-image" title="BeCode VZW"><img src="./assets/images/logos/logo_becode.png" alt="Logo of BeCode VZW"></a>
             <ul>
@@ -357,17 +355,17 @@
                     <h3>Contact us</h3>
                     <form action="#" method="post" id="contactForm">
                         <div class="form-group">
-                            <label for="fullName" class="hidden">Please enter your full name:</label>
+                            <label for="fullName">Please enter your full name:</label>
                             <input type="text" id="fullName" name="fullName" placeholder="Your full name..."/>
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="hidden">Please enter your email:</label>
+                            <label for="email">Please enter your email:</label>
                             <input type="email" id="email" name="email" placeholder="Your email..."/>
                         </div>
 
                         <div class="form-group">
-                            <label for="message" class="hidden">Please enter your message: </label>
+                            <label for="message">Please enter your message: </label>
                             <textarea name="message" id="message" rows="5" placeholder="Your message..."></textarea>
                         </div>
 
@@ -388,5 +386,6 @@
             </div>
         </div>
     </footer>
+</div>
 </body>
 </html>

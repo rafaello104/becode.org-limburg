@@ -1,1 +1,15 @@
-@import "index.scss"; 
+// Import general resources (a.k.a. variables, ..)
+// ===============================================
+@import "variables";
+
+// Import general styling for the entire page
+// ==========================================
+@import "index.scss";
+
+
+// Import section specific styles
+// ==============================
+@import "intro.scss";
+@import "cards.scss";
+@import "sponsors.scss";
+@import "footer.scss";
