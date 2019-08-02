@@ -1,41 +1,15 @@
 @import "variables";
 
 #header {
-    background: url("../assets/images/banner/banner-main.jpg") center 70%/cover;
+    background: url("../assets/images/banner/banner2.jpg") center center/cover;
     height: 100vh;
     position: relative;
 
-    .video-container {
-        position: absolute;
-        left:0;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .video-container video {
-        min-width: 100%;
-        min-height: 100%;
-        max-height:110vh;
-        width: auto;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index:2;
-    }
-
-
-
-
     .overlay {
       position: absolute;
-      background: $mask;
+      background: rgba(40,42,45,.8);
       width: 100%;
-      height: 30%;
+      height: 100%;
       left:0;
       bottom:0;
       z-index:3;
@@ -44,24 +18,74 @@
       align-items:center;
     }
 
+    /* Styling of the second overlay on the bottom and it's content */
+    /* ============================================================ */
     .overlay-content {
+      position: absolute;
+      //background: rgba(40,42,45,0);
+      width: 100%;
+      height: 40%;
+      left:0;
+      bottom:0;
+      z-index:3;
+      display:flex;
+      justify-content:center;
+      align-items:center;
       z-index: 4;
       color:#fff;
+
+      .row {
+        justify-content: space-between;
+      }
+
+      h2, h1 {
+        position:relative;
+        display:inline-block;
+        padding-bottom:2px;
+        margin-bottom:12px;
+        font-size:2rem;
+
+        &::after {
+          content: "";
+          width:100%;
+          height:1px;
+          background-color:$primary;
+          position:absolute;
+          left:0;
+          bottom:0;
+        }
+      }
     }
 
+
+    /* Styling of the menu at the top of the header */
+    /* ============================================ */
     .menu {
-        background-color:$mask;
         position:absolute;
         z-index:4;
         left:0;
         top:0;
         height:54px;
         width:100%;
+        font-weight:600;
+
+        .after-line{
+          position:relative;
+          &::after {
+            content: "";
+            width: 80%;
+            height: 1px;
+            background-color: $primary;
+            position: absolute;
+            left: 12%;
+            bottom: 10px;
+          }
+        }
 
         .brand-image {
-          padding-left:12px;
+          padding-left:24px;
           height:38px;
-          margin-top:10px;
+          margin-top:22px;
           overflow:hidden;
           display:inline-block;
           img {
@@ -71,11 +95,12 @@
         }
 
         ul {
+            margin-top:12px;
             width:50%;
             float:right;
             list-style: none;
             padding:0;
-            padding-right:12px;
+            padding-right:24px;
             display:flex;
             justify-content: flex-end;
 
@@ -89,18 +114,14 @@
                 padding:0 12px;
                 border-radius:999px;
 
-
               a {
-                color:#999;
+                color:#eee;
                 display:block;
                 text-decoration:none;
                 transition:.3s;
               }
 
-
-
               &:hover {
-
                 a {
                   color:#fff;
                 }
@@ -117,3 +138,63 @@
         }
     }
 }
+
+#startTimeBlock {
+  font-size:1.5rem;
+}
+
+
+
+/* Parallax Header */
+/* =============== */
+$scroll-factor : .5;
+
+main {
+  max-height: 100%;
+  overflow-x: hidden;
+  perspective: 1px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+header {
+  position: relative;
+  margin-left:-8px;
+  vertical-align: top;
+  transform-origin: center top;
+  transform:
+          translateZ(-#{$scroll-factor * 2}px)
+          scale(1 + $scroll-factor * 2);
+}
+section, .overlay-content {
+  transform: translateZ(0);
+}
+
+html, body { height: 100%; }
+
+/* Leftover code if we ever decide to use the video */
+/* ================================================ */
+/*
+.video-container {
+    position: absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    max-height:110vh;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:2;
+}
+ */

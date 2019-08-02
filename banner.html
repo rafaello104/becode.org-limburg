@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Data -->
     <title>BeCode | Limburg</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +9,57 @@
     <meta name="author" content="Rafael Lambelin, Selene Nijst">
     <meta name="description" content="BeCode Limburg division's webpage. We list the start of new groups, any news and all contact information.">
 
-    <!-- Stylesheets -->
+    <!-- Framework Stylesheets -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Plugin stylesheets -->
     <link rel="stylesheet" href="./css/plugins/font-awesome/all.min.css">
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/header.css">
 
     <!-- Scripts -->
-<!--    <script src="./scripts/index.js" defer></script>-->
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-
+<main>
 <!-- Banner / Header for the website -->
 <header class="container-fluid section-full" id="header">
+
+    <!-- Only use the code below if we want to use the video -->
+    <!--
     <div class="video-container">
-        <video src="./assets/videos/banner-video3-720p.mp4" autoplay loop></video>
+        <video src="./assets/videos/banner-video6-720p.mp4" autoplay loop></video>
     </div>
+    -->
+
     <div class="menu">
         <a href="https://becode.org" class="brand-image" title="BeCode VZW"><img src="./assets/images/logos/logo_becode.png" alt="Logo of BeCode VZW"></a>
         <ul>
-            <li><a href="https://becode.org">Home @BeCode</a></li>
+            <li><a href="https://becode.org">BeCode.org</a></li>
             <li><a href="https://becode.org/about">About</a></li>
             <li><a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">Calendar</a></li>
-            <li class="btn btn-primary"><a href="https://www.becode.org/register/form_nl.html">Sign up !</a></li>
+            <li class="after-line"><a href="https://www.becode.org/register/form_nl.html">Sign up !</a></li>
         </ul>
     </div>
     <div class="overlay">
-        <div class="container overlay-content">
-            <div class="row">
-                <div class="col-12 col-lg-8">
-                    <h1>Welcome to BeCode Limburg!</h1>
-                    <a class="btn btn-outline-primary hashlink" href="#info">Click to learn more</a>
-                </div>
-                <div class="col-lg-4 col-hidden">
-                    <div id="countdown">
-                        <div class="timer">
-                            <h2>Join us !</h2>
-                            <p id="startTimeBlock">Calculating...</p>
-                            <a href="https://www.becode.org/register/form_nl.html" class="btn btn-primary">Sign up !</a>
+        <div class="overlay-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-7">
+                        <h1>Welcome to BeCode Limburg!</h1>
+                        <p>Here you can find any and all information regarding the local division.
+                        We have a calendar linked below with all the current events and we'll always show when you can expect the next group to start!</p>
+                    </div>
+                    <div class="col-lg-4 col-hidden">
+                        <div id="countdown">
+                            <div class="timer">
+                                <h2>Next group:</h2>
+                                <p id="startTimeBlock">Calculating...</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,116 +71,325 @@
 
 
 <!-- Info on the education program and BeCode in general -->
-<section class="container-fluid section-half" id="info">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-8">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="mb mt">What is BeCode?</h2>
-                        <p class="">
-                            BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.<br>
-                            How does it work? Well, you apply to join our new program and we send you the instructions of what you need to do to qualify.
-                            You don't need any pre-existing knowledge to be able to join this education, all we ask from you is a good attitude and a whole bunch of motivation!
-                            <br><br>
-                            Interested? Come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">infosessions</a> to learn more <br>
-                            Super interested? Sign up right now!
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Time 'till registration closes</h2>
-                        <p id="registrationTimeBlock">Calculating...</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary" target="_blank" referrerpolicy="no-referrer">Sign up!</a>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-block btn-primary"><i class="fas fa-calendar-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="container-fluid section-xsmall" id="footer">
-    <footer>
+    <section class="container-fluid section-half" id="info">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <h3>Useful links</h3>
+            <div class="row" style="justify-content: space-between;">
 
-                    <ul class="footer-list">
-                        <li><a href="https://becode.org">BeCode.org Homepage</a></li>
-                        <li><a href="https://www.becode.org/register/form_nl.html">Register now</a></li>
-                        <li><a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">Event Calendar</a></li>
-                        <li><a href="https://i.pinimg.com/originals/ef/50/15/ef50156cb1ec454be3c4e2addc5ad60c.jpg">Link</a></li>
-                    </ul>
-
-                    <br>
-                    <h3>Our Sponsors</h3>
-
-                    <ul class="footer-list no-after">
-                        <li><a href="https://www.vdab.be/" target="_blank" referrerpolicy="no-referrer">VDAB</a></li>
-                        <li><a href="https://ec.europa.eu/social/main.jsp?catId=325&langId=en" target="_blank" referrerpolicy="no-referrer">European Social Fund</a></li>
-                        <li><a href="https://www.close-the-gap.org/" target="_blank" referrerpolicy="no-referrer">Close The Gap</a></li>
-                        <li><a href="https://i.pinimg.com/originals/ef/50/15/ef50156cb1ec454be3c4e2addc5ad60c.jpg">Link</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <h3>Get in contact</h3>
-
-                    <ul class="footer-list">
-                        <li><a href="mailto:rafael@becode.org">Rafael Lambelin</a> <small>(Coach)</small> </li>
-                        <li><a href="mailto:selene@becode.org">Selene Nijst</a> <small>(Coach)</small> </li>
-                        <li><a href="mailto:an@becode.org">An Cattie</a> <small>(Marketing Officer)</small> </li>
-                        <li><a href="mailto:sameer.srivasta@becode.org">Sameer Srivasta</a> <small>(Junior Coordinator)</small> </li>
-                    </ul>
-
-                    <br>
-                    <img src="./assets/images/logos/logo_becode.png" alt="Logo of BeCode VZW" title="BeCode VZW Logo" class="footer-image"/>
+                <div class="col-12 col-lg-7">
+                    <h2 class="title">What is BeCode?</h2>
+                    <p>
+                        BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.
+                        How does it work? Well, you apply to join our new program and we send you the instructions of what you need to do to qualify.
+                        You don't need any pre-existing knowledge to be able to join this education, all we ask from you is a good attitude and a whole bunch of motivation!
+                        Interested? Come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" title="Google calendar" target="_blank" rel="noopener noreferrer"> infosessions </a> to learn more! Super interested? Sign up right now!
+                    </p>
                 </div>
 
                 <div class="col-12 col-lg-4">
-                    <h3>Contact us</h3>
-
-                    <form action="#" method="post" id="contactForm">
-                        <div class="form-group">
-                            <label for="fullName" class="hidden">Please enter your full name:</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Your full name..."/>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email" class="hidden">Please enter your email:</label>
-                            <input type="email" id="email" name="email" placeholder="Your email..."/>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message" class="hidden">Please enter your message: </label>
-                            <textarea name="message" id="message" rows="5" placeholder="Your message..."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btn btn-primary btn-block" id="contactSubmit"><i class="fas fa-paper-plane"></i> Send</button>
-                        </div>
-                    </form>
+                    <h2>Time 'till registration closes</h2>
+                    <p id="registrationTimer">Calculating...</p>
+                    <ul class="info-buttons equalize-cols-lg">
+                        <li class="col-12 col-lg-8">
+                            <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary">Sign up!</a>
+                        </li>
+                        <li class="col-12 col-lg-4">
+                            <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-block btn-outline-primary calendar" title="Google calendar" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar-alt"></i></a>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </div>
+    </section>
+    <!-- Section: Local team + contact information with a personal touch. -->
+    <section class="container-fluid section-full" id="team">
+        <div class="container">
 
-        <div class="row absolute-bottom">
-            <p>
-                All rights reserved to BeCode VZW
-            </p>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="title">Meet the local team!</h2>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="profile-card">
+                        <img src="./assets/images/staff/rafael.jpeg" alt="BeCode coach Rafael.">
+                        <h3 class="name">Rafael</h3>
+                        <h4 class="title">Coach</h4>
+                        <p class="quote-content">
+                            There are two ways to write error-free programs; only the third one works.
+                        </p>
+                        <p class="quote-author">
+                            Alan J. Perlis
+                        </p>
+                        <ul class="links">
+                            <li><a href="https://linkedin.com/in/codebull" target="_blank" rel="noopener noreferrer" class="linkedin" title="https://linkedin.com/in/codebull"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#bmZ9xRO7M9M" class="youtube" title="Florida Georgia Line - Cruise (Remix) ft. Nelly"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="https://stackoverflow.com/users/4303923/rafael-lambelin" target="_blank" rel="noopener noreferrer" class="stackoverflow" title="Stack Overflow" ><i class="fab fa-stack-overflow"></i></a></li>
+                            <li><a href="mailto:rafael@becode.org" class="gmail" title="rafael@becode.org"><i class="fas fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="profile-card">
+                        <img src="./assets/images/staff/selene.jpeg" alt="BeCode coach Selene.">
+                        <h3 class="name">Selene</h3>
+                        <h4 class="title">Coach</h4>
+                        <p class="quote-content">
+                            If you don't design your own life plan, chances are you'll fall into someone else's plan. And guess what they have planned for you? Not much.
+                        </p>
+                        <p class="quote-author">
+                            Jim Rohn
+                        </p>
+                        <ul class="links">
+                            <li><a href="https://linkedin.com/in/selenenijst" class="linkedin" title="https://linkedin.com/in/selenenijst" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#UOxkGD8qRB4" class="youtube" title="K/DA - POP/STARS (ft Madison Beer, (G)I-DLE, Jaira Burns)"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="https://github.com/SeleneNijst" class="github" target="_blank" rel="noopener noreferrer" title="https://github.com/SeleneNijst"><i class="fab fa-github"></i></a></li>
+                            <li><a href="mailto:selene@becode.org" class="gmail" title="selene@becode.org"><i class="fas fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="profile-card">
+                        <div id="mystery-coach">
+                            <div></div>
+                        </div>
+                        <h3 class="name">Mystery Coach</h3>
+                        <h4 class="title">Intern coach</h4>
+                        <p class="quote-content">
+                            Never underestimate the power of the Scout's code.
+                        </p>
+                        <p class="quote-author">
+                            Teemo
+                        </p>
+                        <ul class="links">
+                            <li><a href="#nice-try" class="linkedin" title="Did you really think it was going to be that easy!?"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#0T_pWJpwl1c" class="youtube" title="League of Legends - Astro Teemo"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#even-nicer-try" class="github" title="I bet you would like to know... wouldn't you? ;)"><i class="fab fa-github"></i></a></li>
+                            <li><a href="mailto:noseyrosey@becode.org" class="gmail" title="Maybe you should drop by the selection days if you'd like to find out..."><i class="fas fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="profile-card">
+                        <img src="./assets/images/staff/an.jpeg" alt="BeCode junior coodrinator An.">
+                        <h3 class="name">An</h3>
+                        <h4 class="title">Junior Coordinator</h4>
+                        <p class="quote-content">
+                            You'll never know your strength until you've faced your struggles.
+                        </p>
+                        <p class="quote-author">
+                            Anonymous
+                        </p>
+                        <ul class="links">
+                            <li><a href="https://www.linkedin.com/in/ancattie/" target="_blank" rel="noopener noreferrer" class="linkedin" title="https://www.linkedin.com/in/ancattie/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#RhghZPu0UtY" class="youtube" title="Meduza - Piece Of Your Heart (ft. Goodboys)"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="mailto:an@becode.org" class="gmail" title="an@becode.org"><i class="fas fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="profile-card">
+                        <img src="./assets/images/staff/sameer.jpeg" alt="BeCode employment mediation officer Sameer.">
+                        <h3 class="name">Sameer</h3>
+                        <h4 class="title">Employment Mediation Officer</h4>
+                        <p class="quote-content">
+                            Bad memories should be stored in Pendrives and Good memories in our minds.
+                        </p>
+                        <p class="quote-author">
+                            Anonymous
+                        </p>
+                        <ul class="links">
+                            <li><a href="https://www.linkedin.com/in/sameersrivastva/" target="_blank" referrerpolicy="no-referrer" class="linkedin" title="https://www.linkedin.com/in/sameersrivastva/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#2H0yWKdZM8g" class="youtube" title="André Hazes Jr. - Leef"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="mailto:sameer@becode.org" class="gmail" title="sameer@becode.org"><i class="fas fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 iframe-wrapper">
+                    <iframe id="frame" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
         </div>
-    </footer>
-</section>
+    </section>
+
+
+
+    <!-- Section containing the logo's of our sponsors -->
+    <section class="container-fluid section-small" id="sponsors">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="title">Our sponsors for Limburg</h2>
+                </div>
+            </div>
+
+            <div id="sponsor-row">
+                <img
+                        src="./assets/images/sponsors/vdab.png"
+                        alt="Sponsor logo - VDAB"
+                        title="Sponsor logo for the company: VDAB"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/esf.png"
+                        alt="Sponsor logo - ESF"
+                        title="Sponsor logo for the company: ESF"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/telenet.png"
+                        alt="Sponsor logo - Telenet"
+                        title="Sponsor logo for the company: Telenet"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/close_the_gap.png"
+                        alt="Sponsor logo - Close The Gap"
+                        title="Sponsor logo for the company: Close The Gap"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/van_olmen_wynant.png"
+                        alt="Sponsor logo - Van Olmen & Wynant"
+                        title="Sponsor logo for the company: Van Olmen & Wynant"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/simplon.png"
+                        alt="Sponsor logo - Simplon"
+                        title="Sponsor logo for the company: Simplon"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/digital_belgium_skills_fund.png"
+                        alt="Sponsor logo - Digital Belgium Skills Fund"
+                        title="Sponsor logo for the company: Digital Belgium Skills Fund"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/degroof_petercam_foundation.png"
+                        alt="Sponsor logo - Degroof Petercam Foundation"
+                        title="Sponsor logo for the company: Degroof Petercam Foundation"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/orange.png"
+                        alt="Sponsor logo - Orange"
+                        title="Sponsor logo for the company: Orange"
+                        class="sponsor-image"
+                />
+
+                <img
+                        src="./assets/images/sponsors/4_wings_foundation.png"
+                        alt="Sponsor logo - 4 Wings Foundation"
+                        title="Sponsor logo for the company: 4 Wings Foundation"
+                        class="sponsor-image"
+                />
+
+            </div>
+
+        </div>
+        <div class="container sponsor-container">
+
+        </div>
+    </section>
+
+
+
+    <!-- Section holding the footer with it's content -->
+    <section class="container-fluid section-xsmall" id="footer">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h3>Useful links</h3>
+
+                        <ul class="footer-list">
+                            <li><a href="https://becode.org">BeCode.org Homepage</a></li>
+                            <li><a href="https://www.becode.org/register/form_nl.html">Register now</a></li>
+                            <li><a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels">Event Calendar</a></li>
+                            <li><a href="https://i.pinimg.com/originals/ef/50/15/ef50156cb1ec454be3c4e2addc5ad60c.jpg">Link</a></li>
+                        </ul>
+
+                        <br>
+                        <h3>Our Sponsors</h3>
+
+                        <ul class="footer-list no-after">
+                            <li><a href="https://www.vdab.be/" target="_blank" referrerpolicy="no-referrer">VDAB</a></li>
+                            <li><a href="https://ec.europa.eu/social/main.jsp?catId=325&langId=en" target="_blank" referrerpolicy="no-referrer">European Social Fund</a></li>
+                            <li><a href="https://www.close-the-gap.org/" target="_blank" referrerpolicy="no-referrer">Close The Gap</a></li>
+                            <li><a href="https://i.pinimg.com/originals/ef/50/15/ef50156cb1ec454be3c4e2addc5ad60c.jpg">Link</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h3>Get in contact</h3>
+
+                        <ul class="footer-list">
+                            <li><a href="mailto:rafael@becode.org">Rafael Lambelin</a> <small>(Coach)</small> </li>
+                            <li><a href="mailto:selene@becode.org">Selene Nijst</a> <small>(Coach)</small> </li>
+                            <li><a href="mailto:an@becode.org">An Cattie</a> <small>(Marketing Officer)</small> </li>
+                            <li><a href="mailto:sameer.srivasta@becode.org">Sameer Srivasta</a> <small>(Junior Coordinator)</small> </li>
+                        </ul>
+
+                        <br>
+                        <img src="./assets/images/logos/logo_becode.png" alt="Logo of BeCode VZW" title="BeCode VZW Logo" class="footer-image"/>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <h3>Contact us</h3>
+
+                        <form action="#" method="post" id="contactForm">
+                            <div class="form-group">
+                                <label for="fullName" class="hidden">Please enter your full name:</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Your full name..."/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="hidden">Please enter your email:</label>
+                                <input type="email" id="email" name="email" placeholder="Your email..."/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="hidden">Please enter your message: </label>
+                                <textarea name="message" id="message" rows="5" placeholder="Your message..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" id="contactSubmit"><i class="fas fa-paper-plane"></i> Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row absolute-bottom">
+                <p>
+                    All rights reserved to BeCode VZW
+                </p>
+            </div>
+        </footer>
+    </section>
+</main>
 </body>
 </html>
