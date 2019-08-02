@@ -145,30 +145,31 @@
 
 /* Parallax Header */
 /* =============== */
-div.content {
-  max-height: 100%;
-  overflow-x: hidden;
-  perspective: 1px;
-  perspective-origin: center top;
-  transform-style: preserve-3d;
-}
+@media screen and (min-device-width: 768px) {
+  div.content {
+    max-height: 100%;
+    overflow-x: hidden;
+    perspective: 1px;
+    perspective-origin: center top;
+    transform-style: preserve-3d;
+  }
 
-#header {
-  position: relative;
-  margin-left: -8px;
-  vertical-align: top;
-  transform-origin: center top;
-  transform: translateZ(-1px) scale(2);
-}
+  #header {
+    position: relative;
+    margin-left: -8px;
+    vertical-align: top;
+    transform-origin: center top;
+    transform: translateZ(-1px) scale(2);
+  }
 
-section, .overlay-content {
-  transform: translateZ(0);
-}
+  section, .overlay-content {
+    transform: translateZ(0);
+  }
 
-html, body {
-  height: 100%;
+  html, body {
+    height: 100%;
+  }
 }
-
 @media screen and (max-width: 992px) {
   #header .overlay-content {
     top: 80px;

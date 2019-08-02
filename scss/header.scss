@@ -147,30 +147,33 @@
 
 /* Parallax Header */
 /* =============== */
-$scroll-factor : .5;
+@media screen and (min-device-width: 768px) {
+  $scroll-factor: .5;
 
-div.content {
-  max-height: 100%;
-  overflow-x: hidden;
-  perspective: 1px;
-  perspective-origin: center top;
-  transform-style: preserve-3d;
+  div.content {
+    max-height: 100%;
+    overflow-x: hidden;
+    perspective: 1px;
+    perspective-origin: center top;
+    transform-style: preserve-3d;
+  }
+
+  #header {
+    position: relative;
+    margin-left: -8px;
+    vertical-align: top;
+    transform-origin: center top;
+    transform: translateZ(-#{$scroll-factor * 2}px) scale(1 + $scroll-factor * 2);
+  }
+  section, .overlay-content {
+    transform: translateZ(0);
+  }
+
+  html, body {
+    height: 100%;
+  }
 }
 
-#header {
-  position: relative;
-  margin-left:-8px;
-  vertical-align: top;
-  transform-origin: center top;
-  transform:
-          translateZ(-#{$scroll-factor * 2}px)
-          scale(1 + $scroll-factor * 2);
-}
-section, .overlay-content {
-  transform: translateZ(0);
-}
-
-html, body { height: 100%; }
 
 @media screen and (max-width: map-get($lg-map, breakpoint)) {
   #header {
