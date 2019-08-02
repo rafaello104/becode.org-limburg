@@ -10,14 +10,6 @@
   font-family: Raleway;
   src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
 }
-@font-face {
-  font-family: Trueno;
-  src: url("../assets/fonts/Trueno/truenorg.otf");
-}
-@font-face {
-  font-family: Trueno-Outline;
-  src: url("../assets/fonts/Trueno/truenobdol.otf");
-}
 #header {
   background: url("../assets/images/banner/banner2.jpg") center center/cover;
   height: 100vh;
@@ -187,7 +179,39 @@
     width: 100%;
     float: none;
     display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .active-clock {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 776px) {
+  #header .menu {
+    width: 546px;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (max-width: 410px) {
+  #header .menu ul {
     justify-content: space-around;
+  }
+  #header .menu ul li.after-line {
+    width: 100%;
+  }
+  #header .menu ul li.after-line:after {
+    width: calc(100% - 50px);
+    left: 25px;
+    bottom: 0;
+  }
+  #header .menu ul li.after-line a {
+    font-size: 1.4rem;
   }
 }
 

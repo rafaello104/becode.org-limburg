@@ -10,14 +10,6 @@
   font-family: Raleway;
   src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
 }
-@font-face {
-  font-family: Trueno;
-  src: url("../assets/fonts/Trueno/truenorg.otf");
-}
-@font-face {
-  font-family: Trueno-Outline;
-  src: url("../assets/fonts/Trueno/truenobdol.otf");
-}
 /* === Standard grid classes === */
 .container {
   width: auto;

@@ -199,9 +199,50 @@
         width:100%;
         float:none;
         display:flex;
-        justify-content: space-around;
+        justify-content: flex-start;
+        flex-wrap: wrap;
       }
     }
   }
+}
 
+@media only screen and (max-width:1200px) {
+  .active-clock {
+    font-size:1.4rem;
+  }
+}
+
+@media only screen and (min-width:576px) {
+  @media only screen and (max-width:776px) {
+    #header {
+      .menu {
+        width:map-get($sm-map, container-w);
+        margin:auto;
+        left:50%;
+        transform:translate(-50%,0);
+        padding:0 15px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width:410px) {
+  #header .menu ul {
+    justify-content: space-around;
+    li.after-line {
+      width:100%;
+
+      &:after {
+        width:calc(100% - 50px);
+        left:25px;
+        bottom:0;
+      }
+
+      a {
+        font-size:1.4rem;
+      }
+    }
+  }
 }
