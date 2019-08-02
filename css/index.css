@@ -129,6 +129,12 @@ h2.title {
   visibility: hidden;
 }
 
+.active-clock {
+  font-size: 2rem;
+  font-family: Raleway;
+  font-weight: 800;
+}
+
 @media screen and (max-device-width: 768px) {
   h1 {
     font-size: 64px;
