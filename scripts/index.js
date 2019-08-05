@@ -16,7 +16,7 @@ function scrollToSection(e) {
 
 // Countdown clock functionality
 // =============================
-startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 29, 2019 09:00:00").getTime());
+startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 23, 2019 09:00:00").getTime());
 startCountdown(document.querySelector("#startTimer"), new Date("Sep 10, 2019 09:00:00").getTime());
 
 // Create a function for multi-countdowns on the page, ask for element to show countdown as well as the datetime to countdown to
@@ -68,6 +68,7 @@ function sendForm(e) {
         messageInput = document.getElementById("message"),
         postData = JSON.stringify({"contact_form": {"fullName": nameInput.value, "email": emailInput.value, "message": messageInput.value}});
 
+
     const request = new XMLHttpRequest();
 
     request.addEventListener('load', function () {
@@ -80,7 +81,7 @@ function sendForm(e) {
     });
 
     request.open('POST', 'https://genk.becode.xyz/mail/contact_form', true);
-    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    request.setRequestHeader('Content-Type', 'text/plain');
     request.send(postData);
 
 }
