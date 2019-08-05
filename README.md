@@ -28,6 +28,9 @@ the dns settings have been changed. <br/>
 If they have: contact TransIp to doublecheck the mail server registration process and if it succeeded.
 
 
+### Team settings:
+- Resize the pictures of the team to be max-width of 350px and then re-compress the images
+
 ## Content
 1. Banner with Countdown timer 'till start of new group' (want to be part of it ?, click here to learn more)
 --> Click to learn more: 
