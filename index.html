@@ -22,6 +22,11 @@
 
     <!-- Scripts -->
     <script src="./scripts/index.min.js" defer></script>
+
+    <!-- Testing with FlipClock.js plugin -->
+    <link rel="stylesheet" href="./css/plugins/flip-clock/flipclock.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./scripts/flipclock.min.js"></script>
 </head>
 <body>
 <div class="content">
@@ -37,6 +42,24 @@
             </ul>
         </div>
         <div class="overlay">
+            <div class="clock" style="margin:2em;"></div>
+            <div class="message"></div>
+            <script type="text/javascript">
+                var clock;
+                clock = $('.clock').FlipClock({
+                    clockFace: 'DailyCounter',
+                    autoStart: false,
+                    callbacks: {
+                        stop: function() {
+                            $('.message').html('The clock has stopped!')
+                        }
+                    }
+                });
+
+                clock.setTime(220880);
+                clock.setCountdown(true);
+                clock.start();
+            </script>
             <div class="overlay-content">
                 <div class="container">
                     <div class="row">
@@ -73,6 +96,7 @@
             
                 <div class="col-12 col-lg-7 flex-column">
                     <h2 class="title">What is BeCode?</h2>
+
                     <p class="mt-auto">
                         BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.
                         How does it work? Well, you apply to join our new program and we send you the instructions of what you need to do to qualify.
