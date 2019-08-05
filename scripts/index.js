@@ -66,7 +66,7 @@ function sendForm(e) {
     let nameInput = document.getElementById("fullName"),
         emailInput = document.getElementById("email"),
         messageInput = document.getElementById("message"),
-        postData = JSON.stringify({"fullName": nameInput.value, "email": emailInput.value, "message": messageInput.value});
+        postData = {"contact_form": {"fullName": nameInput.value, "email": emailInput.value, "message": messageInput.value}};
 
     const request = new XMLHttpRequest();
 
