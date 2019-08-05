@@ -80,7 +80,7 @@ function sendForm(e) {
     });
 
     request.open('POST', 'https://genk.becode.xyz/mail/contact_form', true);
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     request.send(postData);
 
 }
