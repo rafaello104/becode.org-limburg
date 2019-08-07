@@ -18,15 +18,22 @@
     <link rel="stylesheet" href="./css/plugins/font-awesome/all.min.css">
 
     <!-- Personal stylesheet loader -->
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 
     <!-- Scripts -->
-    <script src="./scripts/index.min.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/events.js" defer></script>
 
     <!-- Testing with FlipClock.js plugin -->
     <link rel="stylesheet" href="./css/plugins/flip-clock/flipclock.css" type="text/css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./scripts/jquery.min.js"></script>
     <script src="./scripts/flipclock.min.js"></script>
+
+    <!-- Testing with google calendar API -->
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 </head>
 <body>
 <div class="content">
@@ -42,43 +49,27 @@
             </ul>
         </div>
         <div class="overlay">
-            <div class="clock" style="margin:2em;"></div>
-            <div class="message"></div>
-            <script type="text/javascript">
-                var clock;
-                clock = $('.clock').FlipClock({
-                    clockFace: 'DailyCounter',
-                    autoStart: false,
-                    callbacks: {
-                        stop: function() {
-                            $('.message').html('The clock has stopped!')
-                        }
-                    }
-                });
 
-                clock.setTime(220880);
-                clock.setCountdown(true);
-                clock.start();
-            </script>
             <div class="overlay-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-7">
-                            <h1>Welcome to BeCode Limburg!</h1>
-                            <p>On this page you can find all the information regarding BeCode Limburg. <br>
-                                You can visit our calendar to find out about all the upcoming events we're planning.
-                                Would you like to know more about the local team or our partners, scroll down or click
-                                <a href="#team" class="hashlink">here</a> to
-                                discover some fun personal details!
-                            </p>
+                        <div class="col-12 col-xl-7">
+                            <h1 class="underlined">Welcome to BeCode Limburg!</h1>
+                            <h3>Quickly, sign up before registration closes!</h3>
+                            <div class="clock"></div>
+                            <p id="registrationTimer" class="active-clock">Calculating...</p>
+                            <p class=""><br><br>
+                                Still doubting? <br>
+                            Read more <a href="#info" class="hashlink headerlink">below</a> or come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="headerlink">infosessions!</a></p>
                         </div>
-                        <div class="col-lg-4 col-hidden">
-                            <div id="countdown">
-                                <div class="timer">
-                                    <h2>Next group:</h2>
-                                    <p id="startTimer" class="active-clock">Calculating...</p>
-                                </div>
-                            </div>
+                        <div class="col-12 col-xl-4">
+                            <h2 class="underlined">Upcoming Events</h2>
+
+                            <!--Add buttons to initiate auth sequence and sign out-->
+                            <button id="authorize_button" style="display: none;">Authorize</button>
+                            <button id="signout_button" style="display: none;">Sign Out</button>
+                            <pre id="google-events" style="white-space: pre-wrap;"></pre>
+
                         </div>
                     </div>
                 </div>
@@ -90,36 +81,54 @@
 
 
     <!-- Section: General info + important/useful links. -->
-    <section class="container-fluid section-small" id="info">
+    <section class="container-fluid section-half" id="info">
         <div class="container">
-            <div class="row flex-space-between">
-            
-                <div class="col-12 col-lg-7 flex-column">
-                    <h2 class="title">What is BeCode?</h2>
-
-                    <p class="mt-auto">
-                        BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.
-                        How does it work? Well, you apply to join our new program and we send you the instructions of what you need to do to qualify.
-                        You don't need any pre-existing knowledge to be able to join this education, all we ask from you is a good attitude and a whole bunch of motivation!
-                        Interested? Come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" title="Google calendar" target="_blank" rel="noopener noreferrer"> infosessions </a> to learn more! Super interested? Sign up right now!
-                    </p>
+            <div class="row flex-space-between mt-auto">
+                <div class="col-12 col-lg-6 flex-column">
+                    <div class="v-center">
+                        <h2 class="title">Want to know more about the course?</h2>
+                        <p>
+                            If you want to learn about the course's specific details, you can come to one of our infosessions, these take about half an hour - an hour.
+                            We go over the whole process from start to finish and make sure you leave knowing all you need to make an informed decision.
+                            Once the infosession is over, we're open for questions in case we missed something.
+                            You can visit our calendar to find out about all the upcoming events we're planning.
+                        </p>
+                        <ul class="info-buttons equalize-cols-lg">
+                            <li class="col-12 col-lg-4">
+                                <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary">Sign up!</a>
+                            </li>
+                            <li class="col-12 col-lg-2">
+                                <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-block btn-outline-primary calendar" title="Google calendar" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar-alt"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="col-12 col-lg-4">
-                    <h2 class="title">Time 'till registration closes:</h2>
-                    <p id="registrationTimer" class="active-clock">Calculating...</p>
-                    <ul class="info-buttons equalize-cols-lg">
-                        <li class="col-12 col-lg-8">
-                            <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary">Sign up!</a>
-                        </li>
-                        <li class="col-12 col-lg-4">
-                            <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-block btn-outline-primary calendar" title="Google calendar" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar-alt"></i></a>
-                        </li>
-                    </ul>     
+                <div class="col-12 col-lg-6 flex-end">
+                    <img src="./assets/images/sections/intro/part1.svg" alt="Student having fun"/>
                 </div>
-
             </div>
-        </div>
+            <div class="row">
+                <div class="col-12 col-lg-6 flex-start">
+                    <img src="./assets/images/sections/intro/part2.svg" alt="People working together as a team"/>
+                </div>
+                <div class="col-12 col-lg-6 flex-column">
+                    <div class="v-center">
+                        <h2 class="title">What is BeCode in all of this?</h2>
+                        <p>
+                            BeCode is a non-profit organisation that offers free educational programs for anyone who tries out.
+                        </p>
+                        <p>
+                            How does it work? <br> Well, you apply to join our new program and we send you the instructions of what you need to do to qualify.
+                            You don't need any pre-existing knowledge to be able to join this education, all we ask from you is a good attitude and a whole bunch of motivation!
+                            We supply the laptops and offer help, so you're not alone!
+                            <br><br>
+                            Interested? Come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" title="Google calendar" target="_blank" rel="noopener noreferrer" class="headerlink">infosessions</a> to learn more! Super interested? Sign up right now!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
     </section>
 
 
@@ -400,14 +409,13 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
 
         <div class="row absolute-bottom">
             <div class="col-12">
                 <p>
-                    All rights reserved to BeCode VZW
+                    All rights reserved to BeCode VZW - Thanks to Freepik for vectors
                 </p>
             </div>
         </div>

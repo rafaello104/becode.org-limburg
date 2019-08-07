@@ -190,7 +190,7 @@
 
 .flip-clock-dot {
   display: block;
-  background: #323434;
+  background: #fafafa;
   width: 10px;
   height: 10px;
   position: absolute;
@@ -200,7 +200,7 @@
 
 .flip-clock-divider .flip-clock-label {
   position: absolute;
-  top: -1.5em;
+  bottom: -1.5em;
   right: -86px;
   color: #fff;
   text-shadow: none; }
@@ -420,11 +420,8 @@
 
 
 .clock {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -140%);
   display: table;
   width: unset;
   color: #fff;
+  margin:auto -5px;
 }

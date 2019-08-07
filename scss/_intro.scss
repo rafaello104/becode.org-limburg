@@ -1,0 +1,73 @@
+// === Info styles ===
+#info {
+  background-color:#fff;
+
+  #registrationTimer {
+    display:block;
+    padding:32px 0;
+    color:#555;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom:24px;
+  }
+
+  .row {
+    margin-top:100px;
+  }
+
+  .mt-auto {
+    margin-top:auto;
+  }
+
+
+
+  h2.title {
+    margin-bottom:24px;
+  }
+
+
+  .flex-end, .flex-start {
+    display:flex;
+    align-items:center;
+
+    img {
+      max-width:400px;
+      width:100%;
+    }
+  }
+
+  .flex-end {
+    justify-content: flex-end;
+  }
+
+  .flex-start {
+    justify-content: flex-start;
+  }
+
+  .flex-column {
+    display:flex;
+    align-items:center;
+  }
+}
+
+.info-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+@media only screen and (max-width: map-get($lg-map, breakpoint)){
+  .info-buttons li {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 10px 0px;
+  }
+
+  #info .row > .col-12:not(:last-child) {
+    padding-bottom: 80px;
+  }
+
+
+}

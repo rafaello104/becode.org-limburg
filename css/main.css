@@ -47,6 +47,21 @@
   color: #63c3d1;
 }
 
+a.headerlink {
+  text-decoration: none;
+  position: relative;
+  color: #333;
+}
+a.headerlink::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background-color: #63c3d1;
+}
+
 .container-fluid[class*=section-] {
   padding: 100px 0;
   box-sizing: border-box;
@@ -59,9 +74,12 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 25%;
+  left: 0;
   height: 1px;
   width: 50%;
+  max-width: 400px;
+  left: 50%;
+  transform: translate(-50%, 0);
   background-color: #63c3d1;
 }
 
@@ -140,18 +158,6 @@ h2.title {
     font-size: 42px;
   }
 }
-@font-face {
-  font-family: Montserrat;
-  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
-}
-@font-face {
-  font-family: Lato;
-  src: url("../assets/fonts/Lato/Lato-Thin.ttf");
-}
-@font-face {
-  font-family: Raleway;
-  src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
-}
 #header {
   background: url("../assets/images/banner/banner.jpg") center center/cover;
   height: 100vh;
@@ -178,7 +184,7 @@ h2.title {
   width: 100%;
   height: 40%;
   left: 0;
-  bottom: 0;
+  top: 30%;
   z-index: 3;
   display: flex;
   justify-content: center;
@@ -186,17 +192,25 @@ h2.title {
   z-index: 4;
   color: #fff;
 }
+#header .overlay-content a.headerlink {
+  color: #fff;
+}
 #header .overlay-content .row {
   justify-content: space-between;
 }
 #header .overlay-content h2, #header .overlay-content h1 {
-  position: relative;
-  display: inline-block;
   padding-bottom: 2px;
   margin-bottom: 12px;
   font-size: 2rem;
 }
-#header .overlay-content h2::after, #header .overlay-content h1::after {
+#header .overlay-content h3 {
+  margin-bottom: 12px;
+}
+#header .overlay-content .underlined {
+  position: relative;
+  display: inline-block;
+}
+#header .overlay-content .underlined::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -365,10 +379,41 @@ h2.title {
   color: #555;
   text-align: center;
 }
+#info p {
+  margin-bottom: 24px;
+}
+#info .row {
+  margin-top: 100px;
+}
+#info .mt-auto {
+  margin-top: auto;
+}
+#info h2.title {
+  margin-bottom: 24px;
+}
+#info .flex-end, #info .flex-start {
+  display: flex;
+  align-items: center;
+}
+#info .flex-end img, #info .flex-start img {
+  max-width: 400px;
+  width: 100%;
+}
+#info .flex-end {
+  justify-content: flex-end;
+}
+#info .flex-start {
+  justify-content: flex-start;
+}
+#info .flex-column {
+  display: flex;
+  align-items: center;
+}
 
 .info-buttons {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 48px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -381,18 +426,6 @@ h2.title {
   #info .row > .col-12:not(:last-child) {
     padding-bottom: 80px;
   }
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
-}
-@font-face {
-  font-family: Lato;
-  src: url("../assets/fonts/Lato/Lato-Thin.ttf");
-}
-@font-face {
-  font-family: Raleway;
-  src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
 }
 #team {
   background-color: #fff;

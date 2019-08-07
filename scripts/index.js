@@ -14,10 +14,35 @@ function scrollToSection(e) {
 }
 
 
-// Countdown clock functionality
-// =============================
-startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 23, 2019 09:00:00").getTime());
-startCountdown(document.querySelector("#startTimer"), new Date("Sep 10, 2019 09:00:00").getTime());
+
+// Flip clock countdown functionality
+// ==================================
+var clock;
+clock = $('.clock').FlipClock({
+    clockFace: 'DailyCounter',
+    autoStart: false
+});
+
+var startDate = new Date();
+// Do your operations
+var endDate   = new Date('August 23, 2019 17:00:00');
+var seconds = (endDate.getTime() - startDate.getTime())/1000;
+clock.setTime(seconds);
+clock.setCountdown(true);
+
+
+
+
+
+// Countdown clock functionality based off of screen type
+// ======================================================
+if (window.screen.width > 1766) {
+    // Activate both clocks on desktop, only mobile friendly one on mobile
+    clock.start();
+    document.querySelector("#registrationTimer").style.display="none";
+}
+startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 23, 2019 17:00:00").getTime());
+
 
 // Create a function for multi-countdowns on the page, ask for element to show countdown as well as the datetime to countdown to
 // =============================================================================================================================
@@ -60,8 +85,10 @@ var submit = document.getElementById("contactSubmit");
 submit.addEventListener("click", sendForm);
 
 function sendForm(e) {
+    submit.firstElementChild.classList.toggle("fa-spin");
+    submit.firstElementChild.classList.toggle("fa-paper-plane");
+    submit.firstElementChild.classList.toggle("fa-spinner");
     e.preventDefault();
-    animateIcon();
 
     let nameInput = document.getElementById("fullName"),
         emailInput = document.getElementById("email"),
@@ -73,10 +100,13 @@ function sendForm(e) {
 
     request.addEventListener('load', function () {
         if (this.readyState === 4 && this.status === 200) {
-            console.log(this.responseText);
+            animateIcon();
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
         }
         else {
-            console.log("Error code: " + this.status);
+            animateIcon();
         }
     });
 
@@ -87,21 +117,17 @@ function sendForm(e) {
 }
 
 function animateIcon() {
-    submit.firstElementChild.classList.toggle("fa-spin");
-    submit.firstElementChild.classList.toggle("fa-paper-plane");
-    submit.firstElementChild.classList.toggle("fa-spinner");
-
     window.setTimeout(function() {
         submit.firstElementChild.classList.toggle("fa-spin");
         submit.firstElementChild.classList.toggle("fa-check");
         submit.firstElementChild.classList.toggle("fa-spinner");
-    }, 2000);
+    }, 1);
 
 
     window.setTimeout(function() {
         submit.firstElementChild.classList.toggle("fa-check");
         submit.firstElementChild.classList.toggle("fa-paper-plane");
-    }, 5000);
+    }, 2000);
 }
 
 
@@ -148,7 +174,7 @@ let frame = document.getElementById("frame");
 for (song of songs) {
     song.addEventListener("click", function(e) {
         e.preventDefault();
-        console.dir(e);
+        //console.dir(e);
         if (!frame.parentElement.classList.contains("display")) {
             frame.parentElement.classList.add("display")
         }
