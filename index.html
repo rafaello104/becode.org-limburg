@@ -12,28 +12,32 @@
 
     <!-- Framework stylesheets -->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/grid.min.css">
 
     <!-- Plugin stylesheets -->
     <link rel="stylesheet" href="./css/plugins/font-awesome/all.min.css">
+    <link rel="stylesheet" href="./css/plugins/flip-clock/flipclock.min.css" type="text/css">
 
     <!-- Personal stylesheet loader -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+    <!-- Preloader for origin connects -->
+    <link rel="preconnect" href="https://accounts.google.com">
+    <link rel="preconnect" href="https://content.googleapis.com">
+
+    <!-- Plugin scripts -->
+    <script defer src="./scripts/jquery.min.js"></script>
+    <script defer src="./scripts/flipclock.min.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 
     <!-- Scripts -->
     <script src="./scripts/index.js" defer></script>
     <script src="./scripts/events.js" defer></script>
 
-    <!-- Testing with FlipClock.js plugin -->
-    <link rel="stylesheet" href="./css/plugins/flip-clock/flipclock.css" type="text/css">
-    <script src="./scripts/jquery.min.js"></script>
-    <script src="./scripts/flipclock.min.js"></script>
 
-    <!-- Testing with google calendar API -->
-    <script async defer src="https://apis.google.com/js/api.js"
-            onload="this.onload=function(){};handleClientLoad()"
-            onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
 </head>
 <body>
 <div class="content">
