@@ -70,4 +70,13 @@
   }
 
 
+  #info .flex-start img {
+    display:none;
+  }
+
+  #info .flex-end img {
+    width:100%;
+    margin:auto;
+    max-width:unset;
+  }
 }
