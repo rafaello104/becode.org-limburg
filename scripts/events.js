@@ -129,8 +129,6 @@ function createEvent(event) {
     event_element.appendChild(title_div);
     event_element.appendChild(description_div);
     event_element.appendChild(footer_div);
-
-    console.dir(event);
     return event_element;
 }
 
