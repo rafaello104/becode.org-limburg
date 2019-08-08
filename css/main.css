@@ -1,13 +1,16 @@
 @font-face {
   font-family: Montserrat;
+  font-display: swap;
   src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
 }
 @font-face {
   font-family: Lato;
+  font-display: swap;
   src: url("../assets/fonts/Lato/Lato-Thin.ttf");
 }
 @font-face {
   font-family: Raleway;
+  font-display: swap;
   src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
 }
 body, html {
