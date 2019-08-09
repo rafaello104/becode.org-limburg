@@ -15,20 +15,6 @@ function scrollToSection(e) {
 
 
 
-// Flip clock countdown functionality
-// ==================================
-var clock;
-clock = $('.clock').FlipClock({
-    clockFace: 'DailyCounter',
-    autoStart: false
-});
-
-var startDate = new Date();
-// Do your operations
-var endDate   = new Date('August 23, 2019 17:00:00');
-var seconds = (endDate.getTime() - startDate.getTime())/1000;
-clock.setTime(seconds);
-clock.setCountdown(true);
 
 
 
@@ -38,7 +24,7 @@ clock.setCountdown(true);
 // ======================================================
 if (window.screen.width > 1766) {
     // Activate both clocks on desktop, only mobile friendly one on mobile
-    clock.start();
+
     document.querySelector("#registrationTimer").style.display="none";
 }
 startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 23, 2019 17:00:00").getTime());
