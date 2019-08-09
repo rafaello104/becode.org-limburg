@@ -32,6 +32,14 @@
       z-index: 4;
       color:#fff;
 
+      .info-buttons {
+        display:none;
+      }
+
+      p.mt {
+        margin-top:32px;
+      }
+
       a.headerlink {
         color:#fff;
       }
@@ -189,7 +197,7 @@
       height:calc(100% - 80px);
 
       [class*="col-"] {
-        margin-bottom:48px;
+        margin-bottom:24px;
       }
     }
   }
@@ -208,6 +216,45 @@
         display:flex;
         justify-content: flex-start;
         flex-wrap: wrap;
+      }
+    }
+
+    .overlay-content {
+      h1 {
+        font-size:2.4rem;
+      }
+
+      h3 {
+        display:none !important;
+      }
+
+      .info-buttons {
+        display:flex;
+        margin-bottom:0;
+      }
+
+      .active-clock {
+        display:inline-block;
+        position:relative;
+        margin-bottom:24px;
+
+        &::after {
+          content:" left to register";
+          position:absolute;
+          left:calc(100% + 8px);
+          top:50%;
+          transform:translate(0,-50%);
+          width:100%;
+          text-align: left;
+        }
+      }
+
+      .equalize-cols-lg li {
+        margin:10px auto;
+      }
+
+      p.mt {
+        display:none;
       }
     }
   }
@@ -254,3 +301,82 @@
   }
 }
 
+// === Flipclock styles for smaller pc screens ===
+@media only screen and (max-width:776px) {
+  .flip-clock-wrapper ul li a div div.inn {
+    font-size:40px;
+  }
+
+  .flip-clock-wrapper ul li {
+    line-height:64px;
+  }
+
+  .flip-clock-wrapper ul {
+    width: 50px;
+    height: 70px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    margin:3px;
+  }
+
+  .flip-clock-divider .flip-clock-label {
+    bottom: 0.5em;
+  }
+
+  #header {
+    height:unset;
+    min-height:100vh;
+  }
+
+  .flip-clock-divider.minutes .flip-clock-label {
+    right:-77px;
+  }
+
+  .flip-clock-dot.bottom {
+    bottom:40px;
+  }
+
+  .flip-clock-dot.top {
+    top: 20px;
+  }
+
+  .flip-clock-divider.seconds .flip-clock-label {
+    right: -79px;
+  }
+
+  .flip-clock-divider .flip-clock-label {
+    right: -73px;
+  }
+
+  #header > div.overlay > div > div > div > div.col-12.col-xl-7 > div.clock.flip-clock-wrapper > span.flip-clock-divider.days > span {
+    right:-69px;
+  }
+}
+
+
+@media only screen and (max-device-width: 776px) {
+  #header .overlay {
+    overflow-y:hidden;
+  }
+
+  .menu ul li.after-line {
+    display:none !important;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  #header .overlay {
+    overflow-y:hidden;
+  }
+
+  .menu ul li.after-line {
+    display:none !important;
+  }
+}
+
+@media screen and (max-width: 532px) {
+    .flip-clock-wrapper {
+      display:none;
+    }
+}

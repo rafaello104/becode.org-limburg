@@ -43,7 +43,7 @@ function startCountdown(elem, countDownDate) {
         seconds = addLeadingZero(Math.floor((timeDifference % (1000 * 60)) / 1000));
 
 
-        elem.innerHTML = days + " Days and " + hours + ":"
+        elem.innerHTML = days + " Days, " + hours + ":"
             + minutes + ":" + seconds;
 
         // If the count down is finished, write some text

@@ -25,6 +25,12 @@ body, html {
   color:$primary-active;
 }
 
+.btn-outline-white {
+  background-color:transparent;
+  border-color:#fff;
+  color:#fff;
+}
+
 .btn-primary {
   background-color:$primary-active;
   border-color:$primary-active;
@@ -72,7 +78,6 @@ a.headerlink {
       content: "";
       position: absolute;
       bottom: 0;
-      left: 0;
       height: 1px;
       width: 50%;
       max-width:400px;
@@ -146,23 +151,19 @@ a.headerlink {
   .active-clock {
     font-size:2rem;
     font-family: Raleway;
-    font-weight:800;
+    font-weight:400;
   }
 
 
 
   // === Font sizes for smaller screens ===
   @media only screen and (max-device-width: 768px) {
-    h1 {
-      font-size:64px;
-    }
-
     h2 {
-      font-size:50px;
+      font-size:2.4rem;
     }
 
     h3 {
-      font-size:42px;
+      font-size:1.8rem;
     }
   }
 

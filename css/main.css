@@ -38,6 +38,12 @@ body, html {
   color: #35a3b3;
 }
 
+.btn-outline-white {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
 .btn-primary {
   background-color: #35a3b3;
   border-color: #35a3b3;
@@ -81,7 +87,6 @@ a.headerlink::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
   height: 1px;
   width: 50%;
   max-width: 400px;
@@ -149,20 +154,16 @@ h2.title {
 .active-clock {
   font-size: 2rem;
   font-family: Raleway;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 @media only screen and (max-device-width: 768px) {
-  h1 {
-    font-size: 64px;
-  }
-
   h2 {
-    font-size: 50px;
+    font-size: 2.4rem;
   }
 
   h3 {
-    font-size: 42px;
+    font-size: 1.8rem;
   }
 }
 #header {
@@ -198,6 +199,12 @@ h2.title {
   align-items: center;
   z-index: 4;
   color: #fff;
+}
+#header .overlay-content .info-buttons {
+  display: none;
+}
+#header .overlay-content p.mt {
+  margin-top: 32px;
 }
 #header .overlay-content a.headerlink {
   color: #fff;
@@ -331,7 +338,7 @@ h2.title {
     height: calc(100% - 80px);
   }
   #header .overlay-content [class*=col-] {
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
 }
 @media only screen and (max-width: 776px) {
@@ -344,6 +351,36 @@ h2.title {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+  #header .overlay-content h1 {
+    font-size: 2.4rem;
+  }
+  #header .overlay-content h3 {
+    display: none !important;
+  }
+  #header .overlay-content .info-buttons {
+    display: flex;
+    margin-bottom: 0;
+  }
+  #header .overlay-content .active-clock {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 24px;
+  }
+  #header .overlay-content .active-clock::after {
+    content: " left to register";
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    text-align: left;
+  }
+  #header .overlay-content .equalize-cols-lg li {
+    margin: 10px auto;
+  }
+  #header .overlay-content p.mt {
+    display: none;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -377,6 +414,80 @@ h2.title {
     font-size: 1.4rem;
   }
 }
+@media only screen and (max-width: 776px) {
+  .flip-clock-wrapper ul li a div div.inn {
+    font-size: 40px;
+  }
+
+  .flip-clock-wrapper ul li {
+    line-height: 64px;
+  }
+
+  .flip-clock-wrapper ul {
+    width: 50px;
+    height: 70px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    margin: 3px;
+  }
+
+  .flip-clock-divider .flip-clock-label {
+    bottom: 0.5em;
+  }
+
+  #header {
+    height: unset;
+    min-height: 100vh;
+  }
+
+  .flip-clock-divider.minutes .flip-clock-label {
+    right: -77px;
+  }
+
+  .flip-clock-dot.bottom {
+    bottom: 40px;
+  }
+
+  .flip-clock-dot.top {
+    top: 20px;
+  }
+
+  .flip-clock-divider.seconds .flip-clock-label {
+    right: -79px;
+  }
+
+  .flip-clock-divider .flip-clock-label {
+    right: -73px;
+  }
+
+  #header > div.overlay > div > div > div > div.col-12.col-xl-7 > div.clock.flip-clock-wrapper > span.flip-clock-divider.days > span {
+    right: -69px;
+  }
+}
+@media only screen and (max-device-width: 776px) {
+  #header .overlay {
+    overflow-y: hidden;
+  }
+
+  .menu ul li.after-line {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 410px) {
+  #header .overlay {
+    overflow-y: hidden;
+  }
+
+  .menu ul li.after-line {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 532px) {
+  .flip-clock-wrapper {
+    display: none;
+  }
+}
 #info {
   background-color: #fff;
 }
@@ -386,11 +497,11 @@ h2.title {
   color: #555;
   text-align: center;
 }
-#info p {
-  margin-bottom: 24px;
-}
 #info .row {
   margin-top: 100px;
+}
+#info p {
+  margin-bottom: 24px;
 }
 #info .mt-auto {
   margin-top: auto;
@@ -442,6 +553,11 @@ h2.title {
     width: 100%;
     margin: auto;
     max-width: unset;
+  }
+
+  p {
+    flex-wrap: wrap;
+    text-align: left;
   }
 }
 #team {
@@ -718,6 +834,10 @@ h2.title {
   margin-bottom: 4px;
   font-size: 0.9rem;
 }
+.event .event_description .event_location {
+  display: block;
+  font-style: italic;
+}
 .event .event_footer a.footer_link {
   color: #fff;
   font-size: 0.8rem;
@@ -725,11 +845,11 @@ h2.title {
 .event::after {
   content: "";
   width: 1px;
-  height: 60%;
+  height: 70%;
   background-color: #63c3d1;
   position: absolute;
   left: 0;
-  top: 20%;
+  top: 18%;
 }
 
 /*# sourceMappingURL=main.css.map */

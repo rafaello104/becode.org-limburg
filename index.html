@@ -16,12 +16,11 @@
 
     <!-- Plugin stylesheets -->
     <link rel="stylesheet" href="./css/plugins/font-awesome/all.min.css">
-    <link rel="stylesheet" href="./css/plugins/flip-clock/flipclock.min.css" type="text/css">
 
-    <!-- Personal stylesheet loader -->
-    <link rel="stylesheet" href="./css/main.min.css">
+    <!-- Personal stylesheet -->
+    <link rel="stylesheet" href="./css/main.css">
 
-    <!-- Scripts -->
+    <!-- Script writer -->
     <script type="text/javascript" src="./scripts/script_writer.js" defer="defer"></script>
 </head>
 <body>
@@ -33,7 +32,7 @@
             <ul>
                 <li><a href="https://becode.org">BeCode.org</a></li>
                 <li><a href="https://www.becode.org/partners/">About</a></li>
-                <li><a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" target="blank" rel="noopener noreferrer">Calendar</a></li>
+                <li><a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" target="_blank" rel="noopener noreferrer">Calendar</a></li>
                 <li class="after-line"><a href="https://www.becode.org/register/form_nl.html">Sign up!</a></li>
             </ul>
         </div>
@@ -47,9 +46,20 @@
                             <h3>Quickly, sign up before registration closes!</h3>
                             <div class="clock"></div>
                             <p id="registrationTimer" class="active-clock">Calculating...</p>
-                            <p class=""><br><br>
-                                Still doubting? <br>
-                            Read more <a href="#info" class="hashlink headerlink">below</a> or come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="headerlink">infosessions!</a></p>
+                            <p class="mt">
+                            Still doubting? <br>
+                            Read more <a href="#info" class="hashlink headerlink">below</a> or come to one of our <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="headerlink">infosessions!</a>
+                            </p>
+                            <div class="mobile-only">
+                                <ul class="info-buttons equalize-cols-lg">
+                                    <li class="col-12 col-lg-4">
+                                        <a href="https://www.becode.org/register/form_nl.html" class="btn btn-block btn-primary">Sign up!</a>
+                                    </li>
+                                    <li class="col-12 col-lg-2">
+                                        <a href="https://calendar.google.com/calendar/embed?src=81u6evmbrf8m97nk0l8ttlrlg0%40group.calendar.google.com&ctz=Europe%2FBrussels" class="btn btn-block btn-outline-white calendar" title="Google calendar" target="_blank" rel="noopener noreferrer"><i class="fas fa-calendar-alt"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col-12 col-xl-4">
                             <h2 class="underlined">Upcoming Events</h2>
@@ -410,9 +420,5 @@
         </div>
     </footer>
 </div>
-
-<script defer>
-
-</script>
 </body>
 </html>

@@ -19,6 +19,11 @@
       margin-bottom:4px;
       font-size:.9rem;
     }
+
+    .event_location {
+      display:block;
+      font-style: italic;
+    }
   }
 
   .event_footer {
@@ -34,10 +39,10 @@
   &::after {
     content: "";
     width:1px;
-    height:60%;
+    height:70%;
     background-color:$primary;
     position:absolute;
     left:0;
-    top:20%;
+    top:18%;
   }
 }
