@@ -188,15 +188,11 @@ h2.title {
   align-items: center;
 }
 #header .overlay-content {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 40%;
   left: 0;
-  top: 30%;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 100px;
+  display: table;
   z-index: 4;
   color: #fff;
 }
@@ -334,8 +330,7 @@ h2.title {
 }
 @media only screen and (max-width: 992px) {
   #header .overlay-content {
-    top: 80px;
-    height: calc(100% - 80px);
+    top: 0px;
   }
   #header .overlay-content [class*=col-] {
     margin-bottom: 24px;
@@ -353,7 +348,7 @@ h2.title {
     flex-wrap: wrap;
   }
   #header .overlay-content h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   #header .overlay-content h3 {
     display: none !important;

@@ -2,92 +2,51 @@
 var CLIENT_ID = "774646318135-a6ep0c0bli552ihua32i4n9ua5qi4630.apps.googleusercontent.com";
 var API_KEY = "AIzaSyBHgy3x3E3hy45n2N3iooFn51O2psLVPHQ";
 
-// Array of API discovery doc URLs for APIs used by the quickstart
-var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 
-// Authorization scopes required by the API; multiple scopes can be
-// included, separated by spaces.
-var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+let cal_id = "81u6evmbrf8m97nk0l8ttlrlg0@group.calendar.google.com",
+    api_key = "AIzaSyBHgy3x3E3hy45n2N3iooFn51O2psLVPHQ",
+    iso_time = ISODateString(new Date());
 
-var authorizeButton = document.getElementById('authorize_button');
-var signoutButton = document.getElementById('signout_button');
+const request = new XMLHttpRequest();
 
-/**
- *  On load, called to load the auth2 library and API client library.
- */
-function handleClientLoad() {
-    gapi.load('client:auth2', initClient);
-}
-
-/**
- *  Initializes the API client library and sets up sign-in state
- *  listeners.
- */
-function initClient() {
-    gapi.client.init({
-        apiKey: API_KEY,
-        clientId: CLIENT_ID,
-        discoveryDocs: DISCOVERY_DOCS,
-        scope: SCOPES
-    }).then(function () {
-        // Listen for sign-in state changes.
-        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
-        // Handle the initial sign-in state.
-        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-        authorizeButton.onclick = handleAuthClick;
-        signoutButton.onclick = handleSignoutClick;
-    }, function(error) {
-        addEvents(JSON.stringify(error, null, 2));
-    });
-}
-
-/**
- *  Called when the signed in status changes, to update the UI
- *  appropriately. After a sign-in, the API is called.
- */
-function updateSigninStatus(isSignedIn) {
-    if (isSignedIn) {
-        authorizeButton.style.display = 'none';
-        signoutButton.style.display = 'none';
-        listUpcomingEvents();
-    } else {
-        authorizeButton.style.display = 'block';
-        signoutButton.style.display = 'none';
+request.addEventListener('load', function (data) {
+    let google_events = JSON.parse(this.response).items;
+    console.dir(google_events);
+    var google_events_holder = document.getElementById('google-events');
+    for (google_event of google_events) {
+        var google_event_element = createEvent(google_event);
+        google_events_holder.appendChild(google_event_element);
     }
+
+
+});
+
+request.open('GET', "https://www.googleapis.com/calendar/v3/calendars/" + cal_id + "/events?key=" + api_key + "&singleEvents=true&orderBy=startTime&maxResults=3&timeMin=" + iso_time, true);
+request.send();
+
+
+
+
+
+function ISODateString(d){
+    function pad(n){return n<10 ? '0'+n : n}
+    return d.getUTCFullYear()+'-'
+        + pad(d.getUTCMonth()+1)+'-'
+        + pad(d.getUTCDate())+'T'
+        + pad(d.getUTCHours())+':'
+        + pad(d.getUTCMinutes())+':'
+        + pad(d.getUTCSeconds())+'Z'
 }
 
-/**
- *  Sign in the user upon button click.
- */
-function handleAuthClick(event) {
-    gapi.auth2.getAuthInstance().signIn();
+// Add leading zeros if any number is below 10
+// ===========================================
+function addLeadingZero(item) {
+    if (item < 10) {
+        item = "0" + item;
+    }
+    return item;
 }
 
-/**
- *  Sign out the user upon button click.
- */
-function handleSignoutClick(event) {
-    gapi.auth2.getAuthInstance().signOut();
-}
-
-/**
- * Append a pre element to the body containing the given message
- * as its text node. Used to display the results of the API call.
- *
- * @param {string} message Text to be placed in pre element.
- */
-function noEvents(message) {
-    var events = document.getElementById('google-events');
-    var textContent = document.createTextNode(message + '\n');
-    events.appendChild(textContent);
-}
-
-function addEvents(event) {
-    var events = document.getElementById('google-events');
-    var event_element = createEvent(event);
-    events.appendChild(event_element);
-}
 
 function createEvent(event) {
     // Create elements to set them up for modifications
@@ -98,7 +57,8 @@ function createEvent(event) {
         description_div = document.createElement("div"),
         description = document.createElement("p"),
         footer_div = document.createElement("div"),
-        footer_link = document.createElement("a");
+        footer_link = document.createElement("a"),
+        location_span = document.createElement("span");
 
 
     // Set up the title content
@@ -110,16 +70,22 @@ function createEvent(event) {
 
     // Set up the description's content
     // ================================
-    description.innerText = event.description;
+    location_span.innerHTML = event.location;
+    location_span.classList.add("event_location");
+    description.innerHTML = event.description;
+    description.appendChild(location_span);
     description_div.classList.add("event_description");
     description_div.appendChild(description);
 
 
     // Set up the footer's content
     // ===========================
-    footer_link.innerText = event.location;
+    let gdate = new Date(Date.parse(event.start.dateTime));
+    footer_link.innerText = `${addLeadingZero(gdate.getDate())}/${addLeadingZero(gdate.getMonth()+1)}/${addLeadingZero(gdate.getFullYear())} - ${addLeadingZero(gdate.getHours())}:${addLeadingZero(gdate.getMinutes())}`;
     footer_link.href = event.htmlLink;
     footer_link.classList.add("footer_link");
+    footer_link.target = "_blank" ;
+    footer_link.rel = "noopener noreferrer";
     footer_div.classList.add("event_footer");
     footer_div.appendChild(footer_link);
 
@@ -130,35 +96,4 @@ function createEvent(event) {
     event_element.appendChild(description_div);
     event_element.appendChild(footer_div);
     return event_element;
-}
-
-/**
- * Print the summary and start datetime/date of the next ten events in
- * the authorized user's calendar. If no events are found an
- * appropriate message is printed.
- */
-function listUpcomingEvents() {
-    gapi.client.calendar.events.list({
-        'calendarId': '81u6evmbrf8m97nk0l8ttlrlg0@group.calendar.google.com',
-        'timeMin': (new Date()).toISOString(),
-        'showDeleted': false,
-        'singleEvents': true,
-        'maxResults': 3,
-        'orderBy': 'startTime'
-    }).then(function(response) {
-        var events = response.result.items;
-
-        if (events.length > 0) {
-            for (i = 0; i < 3; i++) {
-                var event = events[i];
-                var when = event.start.dateTime;
-                if (!when) {
-                    when = event.start.date;
-                }
-                addEvents(event);
-            }
-        } else {
-            noEvents('No upcoming events found.');
-        }
-    });
 }
