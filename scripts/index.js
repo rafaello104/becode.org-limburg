@@ -183,9 +183,12 @@ function initImages(images) {
     for (let image of images) {
         image.src = image.getAttribute("data-src");
     }
+
+    let mystery_coach = document.querySelector(".profile-card #mystery-coach>div");
+    mystery_coach.style.background = "url(../assets/images/staff/mystery-coach.jpeg) round";
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    let images = document.querySelectorAll(".profile-card img, .sponsor-image");
+    let images = document.querySelectorAll(".profile-card img, .sponsor-image, #info img");
     initImages(images);
 });
