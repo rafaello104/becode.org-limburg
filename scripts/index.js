@@ -90,6 +90,7 @@ function sendForm(e) {
             nameInput.value = "";
             emailInput.value = "";
             messageInput.value = "";
+            toastr("Mail has been sent, you'll receive a copy within a couple of minutes !");
         }
         else {
             animateIcon();
