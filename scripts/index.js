@@ -184,5 +184,8 @@ function initImages(images) {
         image.src = image.getAttribute("data-src");
     }
 }
-let images = document.querySelectorAll(".profile-card img, .sponsor-image");
-initImages(images);
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    let images = document.querySelectorAll(".profile-card img, .sponsor-image");
+    initImages(images);
+});
