@@ -1,7 +1,7 @@
 // Scroll function, that scrolls element into view and then adds hash after some time to the url
 // =============================================================================================
 var links = document.getElementsByClassName("hashlink");
-for(link of links) {
+for(let link of links) {
     link.addEventListener("click", scrollToSection);
 }
 
@@ -158,7 +158,7 @@ function addLeadingZero(item) {
 let songs = document.getElementsByClassName("youtube");
 let frame = document.getElementById("frame");
 
-for (song of songs) {
+for (let song of songs) {
     song.addEventListener("click", function(e) {
         e.preventDefault();
         //console.dir(e);
@@ -175,3 +175,14 @@ for (song of songs) {
         })
     })
 }
+
+
+// Fill in the images for sponsors & the team
+// ==========================================
+function initImages(images) {
+    for (let image of images) {
+        image.src = image.getAttribute("data-src");
+    }
+}
+let images = document.querySelectorAll(".profile-card img, .sponsor-image");
+initImages(images);
