@@ -15,18 +15,8 @@ function scrollToSection(e) {
 
 
 
-
-
-
-
-
 // Countdown clock functionality based off of screen type
 // ======================================================
-if (window.screen.width > 1766) {
-    // Activate both clocks on desktop, only mobile friendly one on mobile
-
-    document.querySelector("#registrationTimer").style.display="none";
-}
 startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 23, 2019 17:00:00").getTime());
 
 

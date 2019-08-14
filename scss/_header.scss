@@ -1,6 +1,6 @@
 #header {
     background: url("../assets/images/banner/banner.jpg") center center/cover;
-    height: 100vh;
+    min-height:100vh;
     position: relative;
 
     .overlay {
@@ -22,7 +22,7 @@
       position: relative;
       width: 100%;
       left: 0;
-      top: 100px;
+      top: 0;
       display: table;
       z-index: 4;
       color: #fff;
@@ -319,8 +319,7 @@
   }
 
   #header {
-    height:unset;
-    min-height:100vh;
+
   }
 
   .flip-clock-divider.minutes .flip-clock-label {
@@ -369,8 +368,31 @@
   }
 }
 
-@media screen and (max-width: 532px) {
+@media screen and (max-width: 552px) {
     .flip-clock-wrapper {
       display:none;
     }
+}
+
+@media screen and (min-width: 552px) {
+  #registrationTimer {
+    display:none !important;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  @media screen and (max-height: 760px) {
+    #header {
+      transform:translateZ(0) scale(1) !important;
+      margin-left:0;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  @media screen and (max-height: 532px) {
+    #header {
+      transform:translateZ(0) scale(1) !important;
+      margin-left:0;
+    }
+  }
 }

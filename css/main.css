@@ -168,7 +168,7 @@ h2.title {
 }
 #header {
   background: url("../assets/images/banner/banner.jpg") center center/cover;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   /* Styling of the second overlay on the bottom and it's content */
   /* ============================================================ */
@@ -191,7 +191,7 @@ h2.title {
   position: relative;
   width: 100%;
   left: 0;
-  top: 100px;
+  top: 0;
   display: table;
   z-index: 4;
   color: #fff;
@@ -431,11 +431,6 @@ h2.title {
     bottom: 0.5em;
   }
 
-  #header {
-    height: unset;
-    min-height: 100vh;
-  }
-
   .flip-clock-divider.minutes .flip-clock-label {
     right: -77px;
   }
@@ -478,9 +473,26 @@ h2.title {
     display: none !important;
   }
 }
-@media screen and (max-width: 532px) {
+@media screen and (max-width: 552px) {
   .flip-clock-wrapper {
     display: none;
+  }
+}
+@media screen and (min-width: 552px) {
+  #registrationTimer {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1199px) and (max-height: 760px) {
+  #header {
+    transform: translateZ(0) scale(1) !important;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) and (max-height: 532px) {
+  #header {
+    transform: translateZ(0) scale(1) !important;
+    margin-left: 0;
   }
 }
 #info {

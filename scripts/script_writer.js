@@ -1,12 +1,12 @@
 var desktop_scripts = [
     "./scripts/flipclock.min.js",
     "./scripts/events.min.js",
-    "./scripts/index.js"
+    "./scripts/index.min.js"
 ];
 
 var mobile_scripts = [
     "./scripts/events.min.js",
-    "./scripts/index.js"
+    "./scripts/index.min.js"
 ];
 
 var desktop_stylesheets = [
