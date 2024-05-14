@@ -17,7 +17,8 @@ function scrollToSection(e) {
 
 // Countdown clock functionality based off of screen type
 // ======================================================
-startCountdown(document.querySelector("#registrationTimer"), new Date("Aug 23, 2019 17:00:00").getTime());
+let currentYear = new Date().getFullYear();
+startCountdown(document.querySelector("#registrationTimer"), new Date(`Dec 31, ${currentYear} 23:59:59`).getTime());
 
 
 // Create a function for multi-countdowns on the page, ask for element to show countdown as well as the datetime to countdown to
