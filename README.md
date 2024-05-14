@@ -1,5 +1,5 @@
 # Webpage: Becode.org/limburg
-Find the website here: [https://rafaello104.github.io/website-limburg](https://rafaello104.github.io/website-limburg)
+Find the website here: [https://rafaello104.github.io/website-limburg](https://rafaello104.github.io/becode.org-limburg/)
 
 ## Design
 We're going for a contemporary design that will outlay the quality of BeCode Limburg as well as work well with the original website.
